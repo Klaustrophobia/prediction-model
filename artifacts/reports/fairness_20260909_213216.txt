@@ -1,0 +1,71 @@
+==============================================================================
+REPORTE DE FAIRNESS Y SESGOS
+==============================================================================
+Fecha: 2026-09-09 21:32:16
+
+Metricas calculadas sobre el dataset completo (600 empleados).
+Target binarizado: 0 = Permanencia, 1 = Cualquier renuncia.
+
+------------------------------------------------------------------------------
+Variable sensible: Genero
+------------------------------------------------------------------------------
+  Demographic Parity Diff:     0.0059
+  Disparate Impact Ratio:      0.9871
+  TPR Difference:              0.0355
+  FPR Difference:              0.0299
+  Cumple regla 4/5 (EEOC):     True
+  Cumple umbral DP < 0.10:     True
+  Cumple umbral EO < 0.10:     True
+
+  Detalle por grupo:
+  Grupo                      n    Tasa Pos   Precision      Recall        F1       FPR
+  ------------------------------------------------------------------------------------
+  Femenino                 324      0.4506      0.8767      0.8101    0.8421    0.1084
+  Masculino                276      0.4565      0.9127      0.8456    0.8779    0.0786
+
+------------------------------------------------------------------------------
+Variable sensible: Grupo_Edad
+------------------------------------------------------------------------------
+  Demographic Parity Diff:     0.0793
+  Disparate Impact Ratio:      0.8402
+  TPR Difference:              0.1239
+  FPR Difference:              0.1403
+  Cumple regla 4/5 (EEOC):     True
+  Cumple umbral DP < 0.10:     True
+  Cumple umbral EO < 0.10:     False
+
+  Detalle por grupo:
+  Grupo                      n    Tasa Pos   Precision      Recall        F1       FPR
+  ------------------------------------------------------------------------------------
+  21-25                    123      0.4959      0.9016      0.9016    0.9016    0.0968
+  26-30                    182      0.4505      0.8537      0.7955    0.8235    0.1277
+  31-35                    168      0.4167      0.9571      0.7882    0.8645    0.0361
+  36-40                     92      0.4565      0.8810      0.8810    0.8810    0.1000
+  41+                       35      0.4857      0.8235      0.7778    0.8000    0.1765
+
+------------------------------------------------------------------------------
+Variable sensible: Firma_Auditora
+------------------------------------------------------------------------------
+  Demographic Parity Diff:     0.0147
+  Disparate Impact Ratio:      0.9681
+  TPR Difference:              0.0385
+  FPR Difference:              0.0143
+  Cumple regla 4/5 (EEOC):     True
+  Cumple umbral DP < 0.10:     True
+  Cumple umbral EO < 0.10:     True
+
+  Detalle por grupo:
+  Grupo                      n    Tasa Pos   Precision      Recall        F1       FPR
+  ------------------------------------------------------------------------------------
+  Deloitte                 192      0.4531      0.8851      0.8462    0.8652    0.0990
+  KPMG                     204      0.4461      0.9011      0.8283    0.8632    0.0857
+  PwC                      204      0.4608      0.8936      0.8077    0.8485    0.1000
+
+==============================================================================
+INTERPRETACION
+==============================================================================
+  - Demographic Parity Diff < 0.10: paridad entre grupos
+  - Disparate Impact Ratio entre 0.8 y 1.25: regla 4/5 EEOC
+  - Equalized Odds Diff < 0.10: mismo TPR/FPR entre grupos
+  - Valores fuera de rango indican posible sesgo a revisar
+==============================================================================

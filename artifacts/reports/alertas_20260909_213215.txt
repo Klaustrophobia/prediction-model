@@ -1,0 +1,457 @@
+==============================================================================
+REPORTE DE ALERTAS DE ROTACION
+==============================================================================
+Fecha de generacion: 2026-09-09 21:32:15
+
+------------------------------------------------------------------------------
+RESUMEN EJECUTIVO
+------------------------------------------------------------------------------
+Total de empleados analizados:      600
+Riesgo ALTO:                        144 (24.0%)
+Riesgo MODERADO:                    130
+Riesgo BAJO:                        326
+Probabilidad promedio (voluntaria): 0.38589999079704285
+
+Riesgo ALTO por firma:
+  Deloitte        53
+  KPMG            42
+  PwC             49
+
+Riesgo ALTO por area funcional:
+  Auditoría                 90
+  Consultoría               27
+  Impuestos                 16
+  Apoyo administrativo      11
+
+Riesgo ALTO por nivel jerarquico:
+  Operativo            58
+  Profesional          34
+  Gerencial            26
+  Mando medio          19
+  Directivo            7
+
+==============================================================================
+TOP 20 EMPLEADOS EN RIESGO ALTO
+==============================================================================
+
+[1] HN-AUD-0538 | PwC | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 28.2 meses
+    Probabilidad de renuncia voluntaria: 95.05%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5561
+      + Ratio_Salario_Antiguedad               SHAP = +0.2787
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2463
+      + Score_Insatisfaccion                   SHAP = +0.2453
+
+    Factores que PROTEGEN:
+      - Programa_Desarrollo                    SHAP = -0.1266
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+--------------------------------------------------------------------------
+
+[2] HN-AUD-0436 | PwC | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 19.3 meses
+    Probabilidad de renuncia voluntaria: 94.80%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5879
+      + Ratio_Salario_Antiguedad               SHAP = +0.2518
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1835
+      + Programa_Desarrollo                    SHAP = +0.1261
+      + Score_Burnout                          SHAP = +0.1148
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+      - Revisar carga laboral, redistribuir proyectos y considerar dias de descanso
+--------------------------------------------------------------------------
+
+[3] HN-AUD-0105 | KPMG | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 19.9 meses
+    Probabilidad de renuncia voluntaria: 94.44%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5435
+      + Ratio_Salario_Antiguedad               SHAP = +0.2697
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2378
+      + Score_Insatisfaccion                   SHAP = +0.2101
+      + Programa_Desarrollo                    SHAP = +0.1205
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+[4] HN-AUD-0094 | PwC | Asistente de Auditoría
+    Area: Auditoría | Nivel: Operativo | Antiguedad: 10.1 meses
+    Probabilidad de renuncia voluntaria: 93.63%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Antiguedad_Meses                       SHAP = +0.2774
+      + Ratio_Salario_Antiguedad               SHAP = +0.2769
+      + Ratio_Promocion_Anios                  SHAP = +0.2621
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2323
+      + Score_Insatisfaccion                   SHAP = +0.1452
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+--------------------------------------------------------------------------
+
+[5] HN-AUD-0426 | KPMG | Gerente de Consultoría
+    Area: Consultoría | Nivel: Gerencial | Antiguedad: 29.4 meses
+    Probabilidad de renuncia voluntaria: 92.74%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5486
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2922
+      + Ratio_Salario_Antiguedad               SHAP = +0.2631
+      + Ratio_Distancia_Tiempo                 SHAP = +0.0971
+
+    Factores que PROTEGEN:
+      - Programa_Desarrollo                    SHAP = -0.1350
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Analizar alternativas de flexibilidad geografica
+--------------------------------------------------------------------------
+
+[6] HN-AUD-0102 | PwC | Gerente de Auditoría
+    Area: Auditoría | Nivel: Gerencial | Antiguedad: 36.1 meses
+    Probabilidad de renuncia voluntaria: 91.74%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.7381
+      + Ratio_Salario_Antiguedad               SHAP = +0.2809
+      + Score_Insatisfaccion                   SHAP = +0.2414
+      + Score_Burnout                          SHAP = +0.0992
+
+    Factores que PROTEGEN:
+      - Programa_Desarrollo                    SHAP = -0.1159
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Revisar carga laboral, redistribuir proyectos y considerar dias de descanso
+--------------------------------------------------------------------------
+
+[7] HN-AUD-0332 | Deloitte | Gerente de Consultoría
+    Area: Consultoría | Nivel: Gerencial | Antiguedad: 8.4 meses
+    Probabilidad de renuncia voluntaria: 91.57%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.4385
+      + Ratio_Salario_Antiguedad               SHAP = +0.3510
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2603
+      + Antiguedad_Meses                       SHAP = +0.1649
+      + Programa_Desarrollo                    SHAP = +0.0974
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+[8] HN-AUD-0317 | PwC | Asistente de Auditoría
+    Area: Auditoría | Nivel: Operativo | Antiguedad: 11.3 meses
+    Probabilidad de renuncia voluntaria: 90.72%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Antiguedad_Meses                       SHAP = +0.3693
+      + Ratio_Salario_Antiguedad               SHAP = +0.3339
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1691
+      + Programa_Desarrollo                    SHAP = +0.1284
+      + Ratio_Distancia_Tiempo                 SHAP = +0.1156
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+      - Analizar alternativas de flexibilidad geografica
+--------------------------------------------------------------------------
+
+[9] HN-AUD-0255 | KPMG | Gerente de Consultoría
+    Area: Consultoría | Nivel: Gerencial | Antiguedad: 8.4 meses
+    Probabilidad de renuncia voluntaria: 90.58%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.3960
+      + Ratio_Salario_Antiguedad               SHAP = +0.3899
+      + Score_Insatisfaccion                   SHAP = +0.2475
+      + Antiguedad_Meses                       SHAP = +0.1954
+      + Ratio_Distancia_Tiempo                 SHAP = +0.1036
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Analizar alternativas de flexibilidad geografica
+--------------------------------------------------------------------------
+
+[10] HN-AUD-0038 | Deloitte | Director de Auditoría
+    Area: Auditoría | Nivel: Directivo | Antiguedad: 14.1 meses
+    Probabilidad de renuncia voluntaria: 90.48%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Salario_Antiguedad               SHAP = +0.4051
+      + Ratio_Promocion_Anios                  SHAP = +0.3320
+      + Antiguedad_Meses                       SHAP = +0.2192
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2043
+      + Programa_Desarrollo                    SHAP = +0.1078
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+[11] HN-AUD-0283 | PwC | Coordinador Administrativo
+    Area: Apoyo administrativo | Nivel: Mando medio | Antiguedad: 23.1 meses
+    Probabilidad de renuncia voluntaria: 90.39%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5197
+      + Ratio_Salario_Antiguedad               SHAP = +0.2510
+      + Score_Insatisfaccion                   SHAP = +0.2236
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2115
+      + Score_Burnout                          SHAP = +0.1133
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Revisar carga laboral, redistribuir proyectos y considerar dias de descanso
+--------------------------------------------------------------------------
+
+[12] HN-AUD-0082 | Deloitte | Asistente de Auditoría
+    Area: Auditoría | Nivel: Operativo | Antiguedad: 30.7 meses
+    Probabilidad de renuncia voluntaria: 89.94%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.6151
+      + Score_Insatisfaccion                   SHAP = +0.2399
+      + Programa_Desarrollo                    SHAP = +0.1079
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1036
+
+    Factores que PROTEGEN:
+      - Ratio_Salario_Antiguedad               SHAP = -0.2923
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+--------------------------------------------------------------------------
+
+[13] HN-AUD-0179 | PwC | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 11.3 meses
+    Probabilidad de renuncia voluntaria: 89.19%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Salario_Antiguedad               SHAP = +0.4418
+      + Antiguedad_Meses                       SHAP = +0.3706
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1954
+      + Ratio_Capacitacion_Antiguedad          SHAP = +0.1328
+
+    Factores que PROTEGEN:
+      - Ratio_Promocion_Anios                  SHAP = -0.1990
+
+    Recomendaciones de RRHH:
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Ofrecer capacitacion especializada o certificaciones
+--------------------------------------------------------------------------
+
+[14] HN-AUD-0516 | KPMG | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 8.0 meses
+    Probabilidad de renuncia voluntaria: 88.94%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Salario_Antiguedad               SHAP = +0.4912
+      + Antiguedad_Meses                       SHAP = +0.3841
+      + Score_Insatisfaccion                   SHAP = +0.2377
+      + Ratio_Capacitacion_Antiguedad          SHAP = +0.1555
+
+    Factores que PROTEGEN:
+      - Ratio_Promocion_Anios                  SHAP = -0.2256
+
+    Recomendaciones de RRHH:
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Ofrecer capacitacion especializada o certificaciones
+--------------------------------------------------------------------------
+
+[15] HN-AUD-0406 | PwC | Auditor Senior
+    Area: Auditoría | Nivel: Profesional | Antiguedad: 38.0 meses
+    Probabilidad de renuncia voluntaria: 88.78%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.7742
+      + Score_Insatisfaccion                   SHAP = +0.2177
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1842
+      + Programa_Desarrollo                    SHAP = +0.1057
+
+    Factores que PROTEGEN:
+      - Ratio_Salario_Antiguedad               SHAP = -0.2770
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+[16] HN-AUD-0252 | Deloitte | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 6.6 meses
+    Probabilidad de renuncia voluntaria: 88.66%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Salario_Antiguedad               SHAP = +0.4197
+      + Ratio_Promocion_Anios                  SHAP = +0.3642
+      + Antiguedad_Meses                       SHAP = +0.1738
+      + Score_Burnout                          SHAP = +0.1149
+
+    Factores que PROTEGEN:
+      - Programa_Desarrollo                    SHAP = -0.1323
+
+    Recomendaciones de RRHH:
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Revisar carga laboral, redistribuir proyectos y considerar dias de descanso
+--------------------------------------------------------------------------
+
+[17] HN-AUD-0547 | PwC | Asistente de Auditoría
+    Area: Auditoría | Nivel: Operativo | Antiguedad: 21.8 meses
+    Probabilidad de renuncia voluntaria: 88.26%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.5839
+      + Score_Insatisfaccion                   SHAP = +0.2552
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1449
+
+    Factores que PROTEGEN:
+      - Programa_Desarrollo                    SHAP = -0.1363
+      - Ratio_Ausencias_Antiguedad             SHAP = -0.1214
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+--------------------------------------------------------------------------
+
+[18] HN-AUD-0591 | Deloitte | Auditor Senior
+    Area: Auditoría | Nivel: Profesional | Antiguedad: 9.9 meses
+    Probabilidad de renuncia voluntaria: 87.85%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2335
+      + Antiguedad_Meses                       SHAP = +0.2269
+      + Ratio_Promocion_Anios                  SHAP = +0.1887
+      + Ratio_Salario_Antiguedad               SHAP = +0.1584
+      + Programa_Desarrollo                    SHAP = +0.1127
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+[19] HN-AUD-0579 | Deloitte | Supervisor de Auditoría
+    Area: Auditoría | Nivel: Mando medio | Antiguedad: 38.5 meses
+    Probabilidad de renuncia voluntaria: 87.75%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.7050
+      + Score_Insatisfaccion                   SHAP = +0.2149
+      + Tiempo_Desplazamiento_Min              SHAP = +0.1868
+
+    Factores que PROTEGEN:
+      - Ratio_Distancia_Tiempo                 SHAP = -0.1887
+      - Antiguedad_Meses                       SHAP = -0.0898
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Agendar reunion 1:1 para identificar focos de insatisfaccion
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+--------------------------------------------------------------------------
+
+[20] HN-AUD-0292 | PwC | Consultor
+    Area: Consultoría | Nivel: Profesional | Antiguedad: 7.9 meses
+    Probabilidad de renuncia voluntaria: 87.61%
+
+    Factores que EMPUJAN hacia la renuncia:
+      + Ratio_Promocion_Anios                  SHAP = +0.3530
+      + Ratio_Salario_Antiguedad               SHAP = +0.3468
+      + Tiempo_Desplazamiento_Min              SHAP = +0.2285
+      + Antiguedad_Meses                       SHAP = +0.1631
+      + Programa_Desarrollo                    SHAP = +0.1256
+
+    Factores que PROTEGEN:
+      (ninguno)
+
+    Recomendaciones de RRHH:
+      - Revisar plan de carrera y considerar promocion o cambio de responsabilidades
+      - Evaluar ajuste salarial acorde a la antiguedad y mercado
+      - Evaluar opcion de teletrabajo parcial o reubicacion
+      - Disenar plan de retencion para empleados con esta antiguedad (riesgo de estancamiento)
+      - Revisar si el empleado esta sobre-cualificado o requiere nuevos desafios
+--------------------------------------------------------------------------
+
+==============================================================================
+FIN DEL REPORTE
+==============================================================================

@@ -1,0 +1,601 @@
+﻿ID_Empleado,Prob_Permanencia,Prob_Renuncia_Voluntaria,Prob_Renuncia_Involuntaria,Nivel_Riesgo,Firma_Auditora,Cargo,Area_Funcional,Nivel_Jerarquico,Antiguedad_Meses,Salario_Mensual_HNL,Edad,Genero,Evaluacion_Desempeno_1a5,Rotacion_Personal
+HN-AUD-0001,0.96187025,0.022621538,0.015508165,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,63.0,27000,43,Femenino,4.0,Permanencia
+HN-AUD-0002,0.90393734,0.05437244,0.04169028,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,51.3,21500,34,Masculino,3.1,Permanencia
+HN-AUD-0003,0.5927797,0.31095347,0.09626686,Bajo,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,34.7,45000,26,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0004,0.040729202,0.80725,0.15202074,Alto,KPMG,Auditor Senior,Auditoría,Profesional,19.7,35000,34,Masculino,3.9,Renuncia involuntaria
+HN-AUD-0005,0.03043405,0.8695403,0.10002571,Alto,PwC,Jefe Administrativo,Apoyo administrativo,Gerencial,14.1,77000,27,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0006,0.11267538,0.72841686,0.15890776,Alto,PwC,Consultor,Consultoría,Profesional,6.1,38000,28,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0007,0.028532177,0.5830086,0.3884592,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,8.8,23500,31,Masculino,3.5,Renuncia involuntaria
+HN-AUD-0008,0.9070407,0.06840792,0.024551408,Bajo,PwC,Analista de Consultoría,Consultoría,Operativo,61.5,25500,33,Femenino,3.9,Permanencia
+HN-AUD-0009,0.47076073,0.41734174,0.11189748,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,25.2,19500,30,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0010,0.029400226,0.72181505,0.24878472,Alto,PwC,Consultor Fiscal,Impuestos,Profesional,23.1,35500,30,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0011,0.34306595,0.5446285,0.112305574,Moderado,PwC,Consultor Senior,Consultoría,Profesional,55.8,28500,26,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0012,0.18891943,0.6917799,0.119300686,Moderado,PwC,Analista Administrativo,Apoyo administrativo,Operativo,15.0,20500,28,Femenino,4.3,Renuncia involuntaria
+HN-AUD-0013,0.83825463,0.11259633,0.04914898,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,35.8,32000,21,Femenino,4.1,Permanencia
+HN-AUD-0014,0.7897305,0.108977005,0.101292536,Bajo,PwC,Auditor Senior,Auditoría,Profesional,20.5,30000,31,Masculino,3.2,Permanencia
+HN-AUD-0015,0.11483706,0.80838627,0.07677671,Alto,Deloitte,Asistente de Impuestos,Impuestos,Operativo,31.7,21500,30,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0016,0.28745106,0.3032003,0.40934867,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,7.7,21500,25,Femenino,3.6,Permanencia
+HN-AUD-0017,0.08531424,0.8254655,0.08922025,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,18.0,20000,24,Masculino,4.6,Renuncia voluntaria
+HN-AUD-0018,0.13357525,0.7180943,0.14833046,Alto,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,13.1,20500,24,Masculino,4.3,Renuncia voluntaria
+HN-AUD-0019,0.06657994,0.8719964,0.061423622,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,9.9,25500,32,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0020,0.23316245,0.308598,0.45823953,Bajo,KPMG,Senior de Impuestos,Impuestos,Profesional,7.0,28000,34,Femenino,3.5,Renuncia involuntaria
+HN-AUD-0021,0.9462317,0.02256368,0.031204637,Bajo,PwC,Auditor Senior,Auditoría,Profesional,50.0,37500,26,Femenino,3.7,Permanencia
+HN-AUD-0022,0.90377647,0.06431556,0.031908046,Bajo,Deloitte,Gerente de Consultoría,Consultoría,Gerencial,61.8,70000,35,Masculino,4.2,Permanencia
+HN-AUD-0023,0.069003105,0.75915927,0.17183764,Alto,PwC,Asistente de Impuestos,Impuestos,Operativo,11.8,23000,25,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0024,0.6860344,0.24292424,0.0710414,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,49.5,19500,26,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0025,0.8962792,0.0789435,0.02477727,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,60.6,72500,38,Masculino,4.1,Permanencia
+HN-AUD-0026,0.5478855,0.35813507,0.0939794,Bajo,KPMG,Consultor Senior,Consultoría,Profesional,39.9,32500,28,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0027,0.037379175,0.81123,0.15139088,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,10.3,34000,41,Femenino,4.6,Renuncia involuntaria
+HN-AUD-0028,0.058160283,0.7098545,0.23198524,Alto,Deloitte,Asistente de Impuestos,Impuestos,Operativo,14.7,25500,35,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0029,0.89300853,0.068601824,0.038389657,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,72.9,25500,27,Femenino,4.3,Permanencia
+HN-AUD-0030,0.42374194,0.4688338,0.107424244,Moderado,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,21.1,43500,43,Femenino,3.9,Renuncia involuntaria
+HN-AUD-0031,0.07403736,0.61005,0.31591263,Moderado,Deloitte,Asistente de Impuestos,Impuestos,Operativo,11.7,26500,27,Femenino,3.8,Renuncia involuntaria
+HN-AUD-0032,0.057651587,0.6115107,0.3308377,Moderado,KPMG,Asistente de Impuestos,Impuestos,Operativo,12.8,22500,33,Femenino,5.0,Renuncia involuntaria
+HN-AUD-0033,0.15477988,0.6934692,0.15175088,Moderado,KPMG,Senior de Impuestos,Impuestos,Profesional,11.8,37000,51,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0034,0.94539946,0.026328238,0.028272325,Bajo,KPMG,Coordinador Administrativo,Apoyo administrativo,Mando medio,67.7,48000,25,Femenino,3.8,Permanencia
+HN-AUD-0035,0.7771169,0.13212211,0.09076096,Bajo,PwC,Auditor Senior,Auditoría,Profesional,44.9,32500,30,Masculino,3.4,Permanencia
+HN-AUD-0036,0.44460702,0.41551083,0.1398821,Moderado,KPMG,Analista de Consultoría,Consultoría,Operativo,16.0,23500,29,Femenino,3.4,Permanencia
+HN-AUD-0037,0.34275603,0.60367054,0.05357344,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,57.9,19500,23,Masculino,4.3,Renuncia voluntaria
+HN-AUD-0038,0.014063339,0.904762,0.08117467,Alto,Deloitte,Director de Auditoría,Auditoría,Directivo,14.1,100000,34,Femenino,4.6,Renuncia voluntaria
+HN-AUD-0039,0.16288905,0.756971,0.080139995,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,7.1,49500,27,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0040,0.087596186,0.7952263,0.11717751,Alto,PwC,Director de Auditoría,Auditoría,Directivo,7.6,113000,31,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0041,0.9457026,0.024690432,0.029606974,Bajo,PwC,Auditor Senior,Auditoría,Profesional,83.6,38000,30,Femenino,4.7,Permanencia
+HN-AUD-0042,0.87936527,0.08639175,0.034243006,Bajo,Deloitte,Consultor,Consultoría,Profesional,46.1,33000,29,Masculino,4.8,Permanencia
+HN-AUD-0043,0.9470641,0.030828968,0.022106905,Bajo,KPMG,Consultor Senior,Consultoría,Profesional,62.1,40500,35,Femenino,4.0,Permanencia
+HN-AUD-0044,0.06803889,0.8421521,0.08980899,Alto,PwC,Senior de Impuestos,Impuestos,Profesional,21.0,33500,23,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0045,0.9350441,0.03723256,0.027723344,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,59.3,20000,26,Masculino,4.4,Permanencia
+HN-AUD-0046,0.15753406,0.76480913,0.0776568,Alto,PwC,Senior de Impuestos,Impuestos,Profesional,6.8,36000,31,Femenino,4.9,Renuncia voluntaria
+HN-AUD-0047,0.081551254,0.35161668,0.56683207,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,8.8,21000,32,Masculino,3.6,Renuncia involuntaria
+HN-AUD-0048,0.03405144,0.85876626,0.10718233,Alto,PwC,Gerente de Auditoría,Auditoría,Gerencial,16.9,69000,39,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0049,0.18540585,0.5262915,0.28830263,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,6.6,23500,32,Femenino,3.3,Renuncia voluntaria
+HN-AUD-0050,0.8976678,0.063779324,0.038552836,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,51.1,32000,34,Masculino,3.6,Permanencia
+HN-AUD-0051,0.95335835,0.024450654,0.022190949,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,38.0,24000,27,Masculino,3.4,Permanencia
+HN-AUD-0052,0.8907226,0.07758081,0.031696558,Bajo,PwC,Gerente de Impuestos,Impuestos,Gerencial,58.8,61000,45,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0053,0.40008545,0.4409894,0.15892513,Moderado,PwC,Auditor Senior,Auditoría,Profesional,7.2,29500,37,Masculino,4.3,Permanencia
+HN-AUD-0054,0.6652148,0.26977322,0.065012,Bajo,PwC,Auditor Senior,Auditoría,Profesional,22.5,33000,21,Femenino,4.1,Permanencia
+HN-AUD-0055,0.7728549,0.14503057,0.08211453,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,28.0,20500,27,Femenino,2.6,Permanencia
+HN-AUD-0056,0.2191472,0.63306344,0.1477894,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,25.3,21500,22,Femenino,4.8,Renuncia voluntaria
+HN-AUD-0057,0.945452,0.029609583,0.024938442,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,71.5,38000,28,Masculino,2.8,Permanencia
+HN-AUD-0058,0.14774702,0.61048716,0.24176577,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,22.0,21500,34,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0059,0.5271174,0.3219291,0.15095352,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,24.4,24500,32,Masculino,4.0,Permanencia
+HN-AUD-0060,0.9445261,0.031005012,0.024468873,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,75.5,40500,27,Masculino,3.9,Permanencia
+HN-AUD-0061,0.94635886,0.03595954,0.017681658,Bajo,PwC,Consultor,Consultoría,Profesional,65.0,39500,35,Masculino,3.3,Permanencia
+HN-AUD-0062,0.036311816,0.5529257,0.41076246,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,8.2,22000,21,Femenino,3.3,Renuncia voluntaria
+HN-AUD-0063,0.87741125,0.07951353,0.043075193,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,59.6,26500,36,Masculino,3.3,Permanencia
+HN-AUD-0064,0.038825437,0.5274054,0.43376917,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,23.4,21500,25,Femenino,3.3,Renuncia involuntaria
+HN-AUD-0065,0.4884654,0.38280612,0.12872845,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,6.8,23000,31,Masculino,4.0,Permanencia
+HN-AUD-0066,0.24591875,0.33144918,0.422632,Bajo,PwC,Consultor Senior,Consultoría,Profesional,9.3,33000,27,Femenino,4.1,Permanencia
+HN-AUD-0067,0.020437118,0.38014236,0.59942055,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,6.7,35500,28,Femenino,4.0,Renuncia involuntaria
+HN-AUD-0068,0.08770839,0.8009302,0.111361384,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,35.5,23500,35,Masculino,3.6,Renuncia voluntaria
+HN-AUD-0069,0.047217228,0.691125,0.2616578,Moderado,Deloitte,Senior de Impuestos,Impuestos,Profesional,18.0,32500,24,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0070,0.021892207,0.87007886,0.10802892,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,13.4,50000,21,Masculino,3.2,Renuncia voluntaria
+HN-AUD-0071,0.9211936,0.048536465,0.030269923,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,54.7,36000,31,Femenino,3.6,Permanencia
+HN-AUD-0072,0.8466355,0.0968798,0.05648469,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,28.9,22000,21,Masculino,4.9,Permanencia
+HN-AUD-0073,0.83880115,0.11377146,0.04742734,Bajo,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,64.0,24500,22,Femenino,3.0,Permanencia
+HN-AUD-0074,0.72803307,0.21722351,0.054743413,Bajo,KPMG,Consultor,Consultoría,Profesional,16.1,35500,49,Masculino,3.9,Permanencia
+HN-AUD-0075,0.9220041,0.049736883,0.028259072,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,81.3,24000,25,Femenino,4.3,Permanencia
+HN-AUD-0076,0.110281624,0.81385154,0.07586679,Alto,Deloitte,Consultor,Consultoría,Profesional,31.6,34000,35,Masculino,3.3,Renuncia voluntaria
+HN-AUD-0077,0.022190396,0.7813515,0.19645806,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,8.7,20000,34,Masculino,3.2,Renuncia voluntaria
+HN-AUD-0078,0.7537301,0.19301535,0.05325447,Bajo,PwC,Analista Administrativo,Apoyo administrativo,Operativo,27.8,23000,30,Masculino,4.4,Permanencia
+HN-AUD-0079,0.14074066,0.73199064,0.12726878,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,6.0,39500,27,Masculino,4.0,Renuncia involuntaria
+HN-AUD-0080,0.9201527,0.05000563,0.029841676,Bajo,KPMG,Consultor Fiscal,Impuestos,Profesional,47.8,39500,35,Femenino,4.5,Permanencia
+HN-AUD-0081,0.06348999,0.80301476,0.13349526,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,8.9,25500,35,Masculino,4.7,Renuncia voluntaria
+HN-AUD-0082,0.06835777,0.8994436,0.03219861,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,30.7,20000,21,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0083,0.8624652,0.09554126,0.04199356,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,54.8,20000,29,Femenino,2.7,Permanencia
+HN-AUD-0084,0.87071025,0.09315775,0.036131952,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,39.2,27000,39,Masculino,4.3,Permanencia
+HN-AUD-0085,0.12869543,0.67078495,0.20051958,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,16.9,24000,31,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0086,0.9109548,0.05283038,0.03621491,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,32.5,25000,23,Femenino,3.4,Permanencia
+HN-AUD-0087,0.036485482,0.61350656,0.35000792,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,26.0,25000,27,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0088,0.93283737,0.035822455,0.03134017,Bajo,KPMG,Consultor,Consultoría,Profesional,45.6,38000,37,Femenino,3.8,Permanencia
+HN-AUD-0089,0.74806374,0.22097084,0.03096545,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,40.5,67500,39,Femenino,3.3,Permanencia
+HN-AUD-0090,0.037508056,0.7365404,0.22595154,Alto,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,15.8,22500,29,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0091,0.9598962,0.02065711,0.019446716,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,58.5,24000,27,Masculino,2.8,Permanencia
+HN-AUD-0092,0.7977687,0.13446033,0.067771025,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,55.7,36000,21,Masculino,4.4,Renuncia involuntaria
+HN-AUD-0093,0.9217874,0.050457288,0.027755301,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,78.9,50500,26,Femenino,4.0,Permanencia
+HN-AUD-0094,0.025040895,0.9363408,0.03861826,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,10.1,25000,41,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0095,0.1129744,0.74956787,0.13745777,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,22.5,26000,43,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0096,0.22911142,0.7202624,0.050626215,Alto,KPMG,Gerente de Impuestos,Impuestos,Gerencial,14.1,68500,44,Masculino,3.7,Permanencia
+HN-AUD-0097,0.8032486,0.15937074,0.037380632,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,48.6,37500,43,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0098,0.31466836,0.5968016,0.08853005,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,42.7,25500,29,Femenino,3.5,Permanencia
+HN-AUD-0099,0.22286724,0.34669536,0.43043748,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,7.8,25500,21,Femenino,3.6,Renuncia involuntaria
+HN-AUD-0100,0.2123437,0.68601763,0.10163867,Moderado,KPMG,Senior de Impuestos,Impuestos,Profesional,6.9,39000,39,Femenino,3.3,Renuncia voluntaria
+HN-AUD-0101,0.09095692,0.8729583,0.036084756,Alto,PwC,Gerente de Consultoría,Consultoría,Gerencial,39.1,63500,29,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0102,0.04535718,0.9174123,0.0372305,Alto,PwC,Gerente de Auditoría,Auditoría,Gerencial,36.1,68500,25,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0103,0.9589655,0.025587121,0.015447463,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,72.3,30500,24,Femenino,3.8,Permanencia
+HN-AUD-0104,0.8798346,0.096220925,0.023944452,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,37.1,65500,21,Masculino,3.1,Permanencia
+HN-AUD-0105,0.014801731,0.9444332,0.040765084,Alto,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,19.9,43000,28,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0106,0.13038398,0.7990591,0.070556894,Alto,Deloitte,Director de Impuestos,Impuestos,Directivo,57.0,92500,29,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0107,0.088856414,0.6955712,0.21557243,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,10.6,23000,29,Masculino,4.1,Permanencia
+HN-AUD-0108,0.8183201,0.15751089,0.02416904,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,38.7,77500,41,Masculino,4.0,Permanencia
+HN-AUD-0109,0.6794544,0.24412128,0.0764243,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,62.9,22000,40,Femenino,4.5,Permanencia
+HN-AUD-0110,0.06633878,0.75631803,0.17734313,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,9.4,22000,29,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0111,0.0297635,0.638198,0.33203846,Moderado,Deloitte,Senior de Impuestos,Impuestos,Profesional,21.9,32500,30,Femenino,2.8,Renuncia involuntaria
+HN-AUD-0112,0.19050309,0.7585341,0.050962806,Alto,KPMG,Jefe Administrativo,Apoyo administrativo,Gerencial,15.1,60000,31,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0113,0.20062512,0.69042987,0.10894499,Moderado,PwC,Gerente de Impuestos,Impuestos,Gerencial,21.5,71000,44,Masculino,4.0,Permanencia
+HN-AUD-0114,0.8576536,0.10323272,0.039113637,Bajo,Deloitte,Gerente de Impuestos,Impuestos,Gerencial,30.8,72500,30,Masculino,3.6,Permanencia
+HN-AUD-0115,0.9432116,0.03906249,0.017725945,Bajo,Deloitte,Gerente de Impuestos,Impuestos,Gerencial,76.1,71500,38,Masculino,3.9,Permanencia
+HN-AUD-0116,0.58293754,0.32681894,0.09024351,Bajo,PwC,Auditor Senior,Auditoría,Profesional,43.6,32000,21,Masculino,4.1,Permanencia
+HN-AUD-0117,0.101693764,0.78780144,0.11050484,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,17.5,22000,28,Femenino,4.6,Permanencia
+HN-AUD-0118,0.87565804,0.10461636,0.019725591,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,81.6,67500,39,Femenino,4.2,Permanencia
+HN-AUD-0119,0.9194111,0.048923526,0.031665288,Bajo,PwC,Auditor Senior,Auditoría,Profesional,57.0,32000,29,Masculino,4.1,Permanencia
+HN-AUD-0120,0.014761273,0.8593428,0.12589589,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,16.5,32500,32,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0121,0.75419396,0.16456884,0.081237234,Bajo,KPMG,Director de Impuestos,Impuestos,Directivo,36.5,112000,31,Masculino,3.3,Permanencia
+HN-AUD-0122,0.17046905,0.77308416,0.05644682,Alto,Deloitte,Director de Auditoría,Auditoría,Directivo,11.2,101000,37,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0123,0.3853598,0.41874227,0.19589794,Moderado,PwC,Consultor,Consultoría,Profesional,14.1,35500,36,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0124,0.8129813,0.15318023,0.03383842,Bajo,PwC,Supervisor de Auditoría,Auditoría,Mando medio,82.9,48500,40,Masculino,3.7,Permanencia
+HN-AUD-0125,0.056712057,0.5773015,0.36598644,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,25.9,35500,26,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0126,0.9242656,0.05647649,0.019257925,Bajo,PwC,Supervisor de Auditoría,Auditoría,Mando medio,41.5,43000,32,Femenino,3.9,Permanencia
+HN-AUD-0127,0.32034346,0.60219336,0.07746316,Moderado,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,52.0,20500,33,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0128,0.6657309,0.29168692,0.042582177,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,29.3,50500,37,Femenino,3.6,Permanencia
+HN-AUD-0129,0.20479101,0.64851934,0.14668967,Moderado,PwC,Analista de Consultoría,Consultoría,Operativo,6.9,24500,37,Masculino,3.5,Renuncia voluntaria
+HN-AUD-0130,0.92531836,0.053840563,0.0208411,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,78.6,21500,29,Femenino,3.5,Permanencia
+HN-AUD-0131,0.42428893,0.50111806,0.07459302,Moderado,Deloitte,Director de Auditoría,Auditoría,Directivo,30.0,102500,33,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0132,0.9341424,0.048894368,0.01696325,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,67.0,27500,37,Masculino,3.5,Permanencia
+HN-AUD-0133,0.9242357,0.0401549,0.035609443,Bajo,KPMG,Consultor,Consultoría,Profesional,35.4,37500,21,Masculino,4.2,Permanencia
+HN-AUD-0134,0.95970833,0.024793107,0.0154986065,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,58.8,20500,32,Masculino,3.9,Permanencia
+HN-AUD-0135,0.039243113,0.8478976,0.11285924,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,15.2,26000,35,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0136,0.49342868,0.43345633,0.073115,Moderado,KPMG,Asistente de Impuestos,Impuestos,Operativo,15.3,20500,21,Masculino,4.5,Permanencia
+HN-AUD-0137,0.030105736,0.86352926,0.10636507,Alto,KPMG,Analista de Consultoría,Consultoría,Operativo,13.4,26000,30,Femenino,3.2,Renuncia voluntaria
+HN-AUD-0138,0.89725757,0.0708874,0.031855084,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,60.0,24500,31,Masculino,3.4,Permanencia
+HN-AUD-0139,0.30014843,0.29762563,0.4022259,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,9.2,25500,30,Femenino,3.0,Renuncia involuntaria
+HN-AUD-0140,0.65973455,0.2973094,0.04295604,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,30.9,24500,31,Masculino,4.4,Renuncia voluntaria
+HN-AUD-0141,0.028440619,0.85421395,0.11734542,Alto,PwC,Auditor Senior,Auditoría,Profesional,9.9,31500,29,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0142,0.15177183,0.6906851,0.15754308,Moderado,KPMG,Asistente de Impuestos,Impuestos,Operativo,7.9,26000,32,Masculino,3.8,Renuncia involuntaria
+HN-AUD-0143,0.9086006,0.038696274,0.052703064,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,55.9,23500,32,Femenino,3.7,Permanencia
+HN-AUD-0144,0.24711922,0.6591197,0.09376105,Moderado,PwC,Auditor Senior,Auditoría,Profesional,16.0,38000,21,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0145,0.90954256,0.053814307,0.03664311,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,38.3,39500,26,Masculino,4.0,Permanencia
+HN-AUD-0146,0.82044494,0.14619692,0.03335812,Bajo,Deloitte,Senior de Impuestos,Impuestos,Profesional,44.6,40500,31,Masculino,5.0,Permanencia
+HN-AUD-0147,0.91038424,0.064487405,0.025128316,Bajo,PwC,Auditor Senior,Auditoría,Profesional,50.5,30500,27,Femenino,3.5,Permanencia
+HN-AUD-0148,0.028237374,0.80940914,0.1623535,Alto,PwC,Gerente de Consultoría,Consultoría,Gerencial,8.3,68000,26,Femenino,3.4,Permanencia
+HN-AUD-0149,0.9433349,0.043212697,0.013452479,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,76.4,32000,46,Masculino,3.2,Permanencia
+HN-AUD-0150,0.11847945,0.6077309,0.27378964,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,6.7,23000,40,Masculino,3.8,Renuncia involuntaria
+HN-AUD-0151,0.29003718,0.62477046,0.08519233,Moderado,PwC,Gerente de Auditoría,Auditoría,Gerencial,49.8,67500,26,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0152,0.120483056,0.77968717,0.099829786,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,12.2,24000,36,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0153,0.026955692,0.7388606,0.23418368,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,8.8,23000,27,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0154,0.86652863,0.09982828,0.03364307,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,44.9,22000,31,Masculino,4.3,Permanencia
+HN-AUD-0155,0.96280545,0.02003334,0.017161228,Bajo,PwC,Analista Administrativo,Apoyo administrativo,Operativo,82.4,25500,21,Femenino,3.3,Permanencia
+HN-AUD-0156,0.16693802,0.7368743,0.09618767,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,47.8,24500,34,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0157,0.6113211,0.31808987,0.07058899,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,51.4,23000,30,Masculino,4.6,Permanencia
+HN-AUD-0158,0.017929757,0.8371828,0.14488743,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,23.6,51000,33,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0159,0.15964292,0.7425848,0.097772226,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,12.7,24500,23,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0160,0.73469687,0.14667852,0.11862457,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,21.3,23000,30,Masculino,3.0,Permanencia
+HN-AUD-0161,0.21577616,0.49223518,0.2919886,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,21.4,27500,34,Masculino,3.3,Renuncia involuntaria
+HN-AUD-0162,0.95666695,0.020186802,0.023146186,Bajo,Deloitte,Consultor,Consultoría,Profesional,68.4,37000,36,Masculino,4.0,Permanencia
+HN-AUD-0163,0.8615786,0.101922974,0.036498487,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,72.1,32500,23,Masculino,4.6,Permanencia
+HN-AUD-0164,0.87738675,0.09216386,0.03044935,Bajo,PwC,Auditor Senior,Auditoría,Profesional,64.8,33500,37,Masculino,2.9,Permanencia
+HN-AUD-0165,0.9498277,0.034940507,0.015231796,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,59.0,24500,26,Femenino,4.1,Permanencia
+HN-AUD-0166,0.93249166,0.04813099,0.019377384,Bajo,KPMG,Senior de Impuestos,Impuestos,Profesional,72.2,37000,41,Masculino,3.7,Permanencia
+HN-AUD-0167,0.78931445,0.15753148,0.05315405,Bajo,Deloitte,Consultor,Consultoría,Profesional,52.7,36000,33,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0168,0.5101026,0.31983295,0.17006442,Bajo,Deloitte,Director de Auditoría,Auditoría,Directivo,54.9,100500,29,Femenino,3.2,Renuncia involuntaria
+HN-AUD-0169,0.93292344,0.043835104,0.023241391,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,51.4,70000,38,Masculino,3.1,Permanencia
+HN-AUD-0170,0.07121014,0.8095635,0.11922638,Alto,KPMG,Auditor Senior,Auditoría,Profesional,16.0,41000,27,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0171,0.07248626,0.87271863,0.054795083,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,17.4,79500,37,Masculino,4.8,Renuncia voluntaria
+HN-AUD-0172,0.8996177,0.069842026,0.030540317,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,83.8,66500,28,Masculino,3.9,Permanencia
+HN-AUD-0173,0.8954563,0.07392378,0.0306199,Bajo,Deloitte,Senior de Impuestos,Impuestos,Profesional,53.0,42000,27,Femenino,4.8,Permanencia
+HN-AUD-0174,0.4101213,0.3764429,0.21343575,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,8.3,25500,45,Masculino,3.7,Renuncia voluntaria
+HN-AUD-0175,0.93762046,0.035435513,0.026944058,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,70.9,22000,33,Femenino,3.4,Permanencia
+HN-AUD-0176,0.91098166,0.069891624,0.019126752,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,59.4,41500,34,Femenino,4.5,Permanencia
+HN-AUD-0177,0.020222452,0.84668905,0.13308847,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,10.4,27000,27,Masculino,3.6,Renuncia voluntaria
+HN-AUD-0178,0.9500878,0.02774343,0.022168804,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,41.0,32000,21,Masculino,4.9,Permanencia
+HN-AUD-0179,0.06382965,0.89185095,0.04431944,Alto,PwC,Supervisor de Auditoría,Auditoría,Mando medio,11.3,49000,21,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0180,0.65205395,0.26670367,0.08124242,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,33.0,21500,47,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0181,0.031763777,0.7712021,0.19703412,Alto,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,7.6,73000,31,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0182,0.9290138,0.04180891,0.029177317,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,64.0,24000,26,Masculino,4.6,Permanencia
+HN-AUD-0183,0.916654,0.050452344,0.03289363,Bajo,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,64.6,50500,26,Femenino,3.8,Permanencia
+HN-AUD-0184,0.78292847,0.117796876,0.09927462,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,43.3,21500,30,Femenino,3.8,Renuncia involuntaria
+HN-AUD-0185,0.31841463,0.40457875,0.27700663,Moderado,KPMG,Analista de Consultoría,Consultoría,Operativo,21.2,25000,32,Femenino,4.6,Renuncia voluntaria
+HN-AUD-0186,0.1358438,0.74477,0.119386196,Alto,KPMG,Auditor Senior,Auditoría,Profesional,12.8,29000,21,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0187,0.43211865,0.50527215,0.06260918,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,46.4,22500,38,Femenino,3.9,Permanencia
+HN-AUD-0188,0.020102406,0.86084366,0.11905398,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,10.3,25000,30,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0189,0.88635534,0.06430044,0.049344197,Bajo,KPMG,Consultor Senior,Consultoría,Profesional,20.6,43000,28,Femenino,4.0,Permanencia
+HN-AUD-0190,0.80564314,0.058345217,0.13601162,Bajo,PwC,Consultor Senior,Consultoría,Profesional,43.8,40000,30,Femenino,3.6,Renuncia involuntaria
+HN-AUD-0191,0.30402657,0.4426728,0.25330064,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,13.6,22000,25,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0192,0.7353216,0.19719876,0.06747967,Bajo,Deloitte,Consultor,Consultoría,Profesional,19.2,42000,29,Masculino,4.0,Permanencia
+HN-AUD-0193,0.79585034,0.16716745,0.036982197,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,29.2,43000,23,Masculino,3.5,Permanencia
+HN-AUD-0194,0.8355351,0.11550322,0.04896162,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,45.3,39000,34,Femenino,5.0,Permanencia
+HN-AUD-0195,0.6109031,0.34915817,0.039938826,Bajo,PwC,Consultor Senior,Consultoría,Profesional,65.1,32000,30,Femenino,4.7,Permanencia
+HN-AUD-0196,0.3202337,0.6072148,0.07255144,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,65.7,37000,32,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0197,0.23947085,0.52323896,0.23729017,Moderado,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,9.2,20500,30,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0198,0.9069868,0.054059833,0.03895337,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,33.2,24000,34,Masculino,4.3,Permanencia
+HN-AUD-0199,0.44845077,0.40415764,0.14739156,Moderado,PwC,Analista de Consultoría,Consultoría,Operativo,11.7,27000,25,Masculino,3.9,Renuncia involuntaria
+HN-AUD-0200,0.049688783,0.7508033,0.19950789,Alto,Deloitte,Gerente de Consultoría,Consultoría,Gerencial,11.2,67500,36,Femenino,3.0,Renuncia voluntaria
+HN-AUD-0201,0.4452889,0.3941269,0.16058424,Bajo,PwC,Consultor Senior,Consultoría,Profesional,15.2,32500,28,Masculino,3.5,Permanencia
+HN-AUD-0202,0.23814592,0.7112076,0.050646424,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,48.5,68500,31,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0203,0.02640155,0.5851204,0.3884781,Moderado,Deloitte,Auditor Senior,Auditoría,Profesional,10.4,35000,34,Masculino,4.0,Renuncia involuntaria
+HN-AUD-0204,0.1507871,0.80178416,0.047428742,Alto,PwC,Auditor Senior,Auditoría,Profesional,15.3,33000,21,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0205,0.035584513,0.81107074,0.15334474,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,17.6,26500,35,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0206,0.33797958,0.4385069,0.22351356,Moderado,Deloitte,Consultor Senior,Consultoría,Profesional,9.6,37000,28,Femenino,3.2,Permanencia
+HN-AUD-0207,0.9278396,0.053001605,0.019158833,Bajo,Deloitte,Gerente de Consultoría,Consultoría,Gerencial,69.4,80000,27,Femenino,4.2,Permanencia
+HN-AUD-0208,0.9590889,0.029325498,0.011585619,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,75.0,34500,41,Masculino,4.2,Permanencia
+HN-AUD-0209,0.4296654,0.30037284,0.26996177,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,9.2,40000,27,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0210,0.8327274,0.1063641,0.06090856,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,48.9,23500,22,Femenino,3.5,Permanencia
+HN-AUD-0211,0.9549794,0.024569795,0.020450836,Bajo,Deloitte,Consultor,Consultoría,Profesional,70.1,39000,39,Masculino,3.6,Permanencia
+HN-AUD-0212,0.05218679,0.8422017,0.105611436,Alto,PwC,Gerente de Impuestos,Impuestos,Gerencial,13.9,73000,26,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0213,0.6819139,0.21917136,0.09891474,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,33.9,23000,34,Femenino,4.2,Permanencia
+HN-AUD-0214,0.038353797,0.7753091,0.18633708,Alto,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,8.6,25500,33,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0215,0.87951976,0.08382591,0.036654312,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,63.2,31500,38,Femenino,3.2,Permanencia
+HN-AUD-0216,0.16517285,0.58954203,0.24528512,Moderado,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,8.7,28000,30,Femenino,3.5,Permanencia
+HN-AUD-0217,0.6127642,0.26507884,0.122156985,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,48.9,35500,30,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0218,0.04072574,0.37826183,0.5810124,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,8.5,22000,29,Femenino,3.9,Renuncia involuntaria
+HN-AUD-0219,0.05929534,0.48622096,0.45448372,Moderado,KPMG,Consultor Fiscal,Impuestos,Profesional,8.6,31500,34,Femenino,3.2,Renuncia voluntaria
+HN-AUD-0220,0.2915535,0.33544338,0.37300315,Bajo,KPMG,Consultor Fiscal,Impuestos,Profesional,10.5,32000,24,Masculino,3.4,Permanencia
+HN-AUD-0221,0.92657095,0.040263664,0.03316539,Bajo,PwC,Analista de Consultoría,Consultoría,Operativo,52.5,24000,28,Masculino,3.7,Permanencia
+HN-AUD-0222,0.017975776,0.7703072,0.21171707,Alto,KPMG,Consultor,Consultoría,Profesional,14.9,37000,33,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0223,0.35561213,0.49647167,0.14791614,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,22.9,23500,32,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0224,0.90209293,0.04516524,0.052741837,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,45.4,27000,28,Femenino,3.4,Permanencia
+HN-AUD-0225,0.30373904,0.638086,0.058174927,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,59.1,23000,34,Masculino,3.5,Renuncia voluntaria
+HN-AUD-0226,0.03971372,0.822948,0.13733836,Alto,PwC,Gerente de Auditoría,Auditoría,Gerencial,12.9,74500,23,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0227,0.8682335,0.07648222,0.05528431,Bajo,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,20.6,50500,33,Femenino,3.2,Permanencia
+HN-AUD-0228,0.62557614,0.31371212,0.060711764,Bajo,PwC,Director de Auditoría,Auditoría,Directivo,30.9,107000,32,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0229,0.44481906,0.4274696,0.12771133,Moderado,PwC,Analista de Consultoría,Consultoría,Operativo,19.3,22000,25,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0230,0.92178816,0.061004385,0.017207414,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,82.0,21000,32,Femenino,3.9,Permanencia
+HN-AUD-0231,0.93012226,0.049329065,0.020548636,Bajo,PwC,Director de Auditoría,Auditoría,Directivo,57.4,92000,30,Femenino,4.0,Permanencia
+HN-AUD-0232,0.77982324,0.14956081,0.070615955,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,34.9,40500,29,Femenino,4.8,Permanencia
+HN-AUD-0233,0.8374768,0.117709234,0.04481395,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,46.6,25000,28,Femenino,4.2,Permanencia
+HN-AUD-0234,0.73736626,0.19277135,0.06986245,Bajo,PwC,Auditor Senior,Auditoría,Profesional,73.7,36000,32,Femenino,3.6,Permanencia
+HN-AUD-0235,0.76659095,0.18169719,0.051711876,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,31.9,24000,39,Femenino,4.0,Permanencia
+HN-AUD-0236,0.12656526,0.78759706,0.08583767,Alto,PwC,Director de Auditoría,Auditoría,Directivo,20.3,112500,29,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0237,0.050826732,0.55153155,0.3976417,Moderado,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,17.2,24500,34,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0238,0.13070834,0.75019497,0.119096726,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,11.8,21500,36,Masculino,3.8,Renuncia involuntaria
+HN-AUD-0239,0.61637664,0.31726286,0.06636048,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,50.0,21000,29,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0240,0.10286825,0.78701377,0.11011795,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,16.8,36500,28,Femenino,3.8,Permanencia
+HN-AUD-0241,0.62951076,0.2683529,0.10213634,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,52.5,34500,35,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0242,0.14977258,0.67732084,0.17290652,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,38.7,26500,24,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0243,0.8988934,0.061632402,0.039474238,Bajo,KPMG,Consultor,Consultoría,Profesional,36.7,32000,21,Femenino,3.3,Renuncia voluntaria
+HN-AUD-0244,0.8482101,0.10317733,0.048612595,Bajo,PwC,Auditor Senior,Auditoría,Profesional,22.0,39000,43,Femenino,4.3,Permanencia
+HN-AUD-0245,0.4041434,0.4560123,0.13984428,Moderado,PwC,Supervisor de Auditoría,Auditoría,Mando medio,33.3,48000,36,Masculino,4.3,Permanencia
+HN-AUD-0246,0.16105695,0.5674286,0.27151445,Moderado,Deloitte,Senior de Impuestos,Impuestos,Profesional,6.4,35000,22,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0247,0.9236422,0.04357818,0.032779623,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,37.1,39500,30,Femenino,4.1,Permanencia
+HN-AUD-0248,0.35766715,0.5398177,0.10251515,Moderado,Deloitte,Senior de Impuestos,Impuestos,Profesional,50.3,33500,38,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0249,0.047647543,0.41457817,0.53777426,Moderado,PwC,Auditor Senior,Auditoría,Profesional,9.7,35000,22,Femenino,4.3,Renuncia involuntaria
+HN-AUD-0250,0.35200801,0.46633035,0.18166164,Moderado,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,24.4,23500,43,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0251,0.15686525,0.7426902,0.10044456,Alto,Deloitte,Asistente de Impuestos,Impuestos,Operativo,10.5,26000,29,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0252,0.03141572,0.88664156,0.081942774,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,6.6,47000,47,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0253,0.28570276,0.63730055,0.076996654,Moderado,KPMG,Senior de Impuestos,Impuestos,Profesional,14.0,37000,37,Masculino,3.3,Permanencia
+HN-AUD-0254,0.540166,0.40687665,0.052957278,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,28.2,19500,36,Femenino,3.7,Renuncia involuntaria
+HN-AUD-0255,0.016479727,0.90584975,0.07767057,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,8.4,69000,31,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0256,0.9217252,0.038702488,0.03957231,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,35.0,26500,21,Femenino,4.3,Permanencia
+HN-AUD-0257,0.9524756,0.036098935,0.011425473,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,70.8,77500,21,Masculino,4.6,Permanencia
+HN-AUD-0258,0.8887408,0.0870575,0.024201702,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,79.1,24000,30,Masculino,4.3,Permanencia
+HN-AUD-0259,0.29562637,0.43734762,0.267026,Moderado,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,6.5,59000,26,Femenino,4.0,Permanencia
+HN-AUD-0260,0.94549763,0.037402127,0.017100222,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,78.6,37000,32,Masculino,3.5,Permanencia
+HN-AUD-0261,0.90573865,0.062195126,0.032066252,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,37.8,37000,21,Femenino,4.4,Permanencia
+HN-AUD-0262,0.64044744,0.29708418,0.06246838,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,28.8,22000,28,Femenino,5.0,Renuncia voluntaria
+HN-AUD-0263,0.90035474,0.071026824,0.028618468,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,39.6,33000,32,Femenino,5.0,Permanencia
+HN-AUD-0264,0.9543889,0.029717544,0.01589357,Bajo,PwC,Auditor Senior,Auditoría,Profesional,83.3,38500,21,Femenino,4.6,Permanencia
+HN-AUD-0265,0.68523204,0.25732467,0.057443302,Bajo,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,50.0,23000,26,Masculino,4.4,Permanencia
+HN-AUD-0266,0.11498086,0.76641357,0.118605554,Alto,KPMG,Senior de Impuestos,Impuestos,Profesional,6.4,36000,30,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0267,0.93086004,0.049963668,0.01917627,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,52.9,19500,38,Femenino,4.0,Permanencia
+HN-AUD-0268,0.044232473,0.71242493,0.24334261,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,6.3,33000,21,Femenino,4.6,Permanencia
+HN-AUD-0269,0.9457239,0.02688059,0.027395457,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,64.1,33000,24,Masculino,3.5,Permanencia
+HN-AUD-0270,0.03223546,0.70944667,0.25831786,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,6.2,33500,22,Masculino,3.5,Renuncia involuntaria
+HN-AUD-0271,0.11882699,0.5496651,0.33150795,Moderado,Deloitte,Analista de Consultoría,Consultoría,Operativo,8.4,19000,36,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0272,0.5672603,0.31313172,0.119607955,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,14.9,28000,28,Masculino,3.4,Permanencia
+HN-AUD-0273,0.4447955,0.30933386,0.24587059,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,36.9,21000,21,Femenino,4.1,Renuncia involuntaria
+HN-AUD-0274,0.95933867,0.022415549,0.018245758,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,66.4,25500,26,Femenino,5.0,Permanencia
+HN-AUD-0275,0.75295633,0.1754893,0.07155436,Bajo,PwC,Consultor,Consultoría,Profesional,26.7,35500,34,Masculino,3.6,Permanencia
+HN-AUD-0276,0.9350445,0.030249972,0.03470555,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,35.2,23000,25,Femenino,4.2,Permanencia
+HN-AUD-0277,0.56784564,0.17386639,0.2582879,Bajo,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,24.0,22500,26,Masculino,3.7,Permanencia
+HN-AUD-0278,0.029672986,0.4275689,0.5427581,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,16.5,21000,31,Masculino,3.8,Renuncia involuntaria
+HN-AUD-0279,0.9003547,0.06603744,0.03360788,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,57.8,38500,26,Femenino,4.6,Permanencia
+HN-AUD-0280,0.079130165,0.6373424,0.28352746,Moderado,PwC,Asistente de Impuestos,Impuestos,Operativo,6.5,20000,38,Masculino,3.2,Renuncia voluntaria
+HN-AUD-0281,0.06598317,0.86293364,0.07108324,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,22.9,25000,41,Femenino,5.0,Renuncia voluntaria
+HN-AUD-0282,0.83950144,0.11063265,0.049865957,Bajo,KPMG,Senior de Impuestos,Impuestos,Profesional,29.1,35000,27,Masculino,3.4,Permanencia
+HN-AUD-0283,0.016702618,0.9038624,0.079434976,Alto,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,23.1,49000,33,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0284,0.02459287,0.84149855,0.13390853,Alto,PwC,Analista de Consultoría,Consultoría,Operativo,11.2,27000,33,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0285,0.830122,0.1398523,0.0300257,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,19.4,65000,32,Femenino,4.1,Permanencia
+HN-AUD-0286,0.6324314,0.3206059,0.046962667,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,33.2,48500,33,Femenino,4.6,Renuncia voluntaria
+HN-AUD-0287,0.84769666,0.11172856,0.040574815,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,77.5,51500,38,Femenino,3.3,Permanencia
+HN-AUD-0288,0.9319575,0.04567833,0.022364236,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,50.6,34000,35,Masculino,3.7,Permanencia
+HN-AUD-0289,0.12666534,0.73347956,0.13985512,Alto,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,39.2,23500,32,Femenino,3.4,Renuncia voluntaria
+HN-AUD-0290,0.14211817,0.66370237,0.19417945,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,25.8,35500,30,Femenino,3.5,Permanencia
+HN-AUD-0291,0.5145772,0.44281086,0.042611886,Moderado,PwC,Director de Impuestos,Impuestos,Directivo,16.0,103500,32,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0292,0.032818004,0.8760586,0.09112337,Alto,PwC,Consultor,Consultoría,Profesional,7.9,36000,38,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0293,0.06270588,0.6930372,0.24425691,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,10.1,25500,34,Masculino,3.4,Renuncia voluntaria
+HN-AUD-0294,0.64392376,0.27613336,0.07994286,Bajo,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,15.6,19500,41,Femenino,3.5,Permanencia
+HN-AUD-0295,0.85306364,0.12305209,0.023884289,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,83.6,67000,34,Masculino,4.4,Permanencia
+HN-AUD-0296,0.92356807,0.058997717,0.017434191,Bajo,PwC,Gerente de Auditoría,Auditoría,Gerencial,68.1,67000,32,Femenino,3.9,Permanencia
+HN-AUD-0297,0.0894775,0.8368391,0.073683426,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,31.2,45000,21,Masculino,3.2,Renuncia voluntaria
+HN-AUD-0298,0.040958263,0.841639,0.11740276,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,17.3,28500,22,Masculino,4.9,Renuncia voluntaria
+HN-AUD-0299,0.8101177,0.14315727,0.046724964,Bajo,PwC,Consultor,Consultoría,Profesional,80.7,34500,35,Femenino,4.4,Permanencia
+HN-AUD-0300,0.94151765,0.03705965,0.021422684,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,83.0,21000,31,Femenino,4.6,Permanencia
+HN-AUD-0301,0.07306479,0.67537487,0.2515604,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,12.1,30500,22,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0302,0.7710193,0.16722727,0.061753463,Bajo,Deloitte,Consultor,Consultoría,Profesional,21.8,32500,29,Masculino,4.1,Permanencia
+HN-AUD-0303,0.66505057,0.29476205,0.040187337,Bajo,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,75.2,21000,28,Masculino,3.1,Renuncia voluntaria
+HN-AUD-0304,0.5069701,0.3937698,0.09926009,Bajo,Deloitte,Senior de Impuestos,Impuestos,Profesional,55.2,30000,35,Femenino,2.8,Renuncia voluntaria
+HN-AUD-0305,0.48346716,0.43869585,0.07783696,Moderado,PwC,Auditor Senior,Auditoría,Profesional,15.8,38000,37,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0306,0.07108398,0.77693814,0.15197788,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,23.0,20500,37,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0307,0.81497204,0.14323668,0.041791268,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,80.6,20000,37,Femenino,4.0,Permanencia
+HN-AUD-0308,0.95861685,0.02712488,0.014258246,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,71.2,26500,30,Masculino,4.0,Permanencia
+HN-AUD-0309,0.04048785,0.8697405,0.08977162,Alto,PwC,Consultor,Consultoría,Profesional,12.2,29000,34,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0310,0.09788187,0.53649837,0.36561975,Moderado,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,8.3,48500,28,Femenino,3.6,Renuncia involuntaria
+HN-AUD-0311,0.86825943,0.09231461,0.039425917,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,72.4,40000,31,Masculino,3.7,Renuncia voluntaria
+HN-AUD-0312,0.81515163,0.11046816,0.07438022,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,19.0,32500,36,Femenino,4.1,Permanencia
+HN-AUD-0313,0.12452762,0.7932216,0.08225082,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,12.6,31500,32,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0314,0.805828,0.14144957,0.052722454,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,61.0,53500,30,Femenino,4.2,Permanencia
+HN-AUD-0315,0.6724599,0.22429936,0.10324073,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,25.5,35000,21,Femenino,2.8,Permanencia
+HN-AUD-0316,0.78144383,0.17093097,0.04762518,Bajo,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,34.2,53500,31,Femenino,2.9,Permanencia
+HN-AUD-0317,0.019944197,0.9071858,0.07286999,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,11.3,22000,27,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0318,0.8716349,0.0795215,0.0488436,Bajo,Deloitte,Consultor Fiscal,Impuestos,Profesional,35.7,38000,23,Masculino,3.7,Permanencia
+HN-AUD-0319,0.21599333,0.5463856,0.23762105,Moderado,PwC,Senior de Impuestos,Impuestos,Profesional,16.4,32500,27,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0320,0.91298056,0.058946423,0.028073039,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,63.2,39500,38,Masculino,3.7,Permanencia
+HN-AUD-0321,0.92755365,0.051082246,0.021364069,Bajo,PwC,Director de Consultoría,Consultoría,Directivo,66.0,94500,38,Masculino,4.6,Permanencia
+HN-AUD-0322,0.02198862,0.7968137,0.18119767,Alto,PwC,Analista Administrativo,Apoyo administrativo,Operativo,19.6,26500,21,Femenino,3.2,Renuncia voluntaria
+HN-AUD-0323,0.8885832,0.07517131,0.036245566,Bajo,Deloitte,Consultor,Consultoría,Profesional,46.9,37000,28,Masculino,3.5,Permanencia
+HN-AUD-0324,0.31622833,0.5641841,0.11958759,Moderado,KPMG,Gerente de Auditoría,Auditoría,Gerencial,12.3,71000,39,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0325,0.6751167,0.23863833,0.086244956,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,71.4,22500,31,Femenino,3.0,Permanencia
+HN-AUD-0326,0.06854725,0.72544986,0.20600295,Alto,Deloitte,Consultor Fiscal,Impuestos,Profesional,6.3,33000,25,Masculino,3.7,Renuncia voluntaria
+HN-AUD-0327,0.6238169,0.30491427,0.07126883,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,27.4,34000,40,Femenino,4.3,Permanencia
+HN-AUD-0328,0.92661905,0.055468116,0.017912846,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,80.0,60000,27,Masculino,4.2,Permanencia
+HN-AUD-0329,0.0936484,0.8742283,0.032123327,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,42.4,71500,30,Femenino,4.6,Renuncia voluntaria
+HN-AUD-0330,0.8574475,0.09045915,0.052093364,Bajo,PwC,Analista de Consultoría,Consultoría,Operativo,47.0,27000,33,Masculino,4.0,Renuncia involuntaria
+HN-AUD-0331,0.05019277,0.86295617,0.086851016,Alto,PwC,Supervisor de Auditoría,Auditoría,Mando medio,7.5,49500,23,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0332,0.029758615,0.9157356,0.05450582,Alto,Deloitte,Gerente de Consultoría,Consultoría,Gerencial,8.4,56500,32,Masculino,4.7,Renuncia voluntaria
+HN-AUD-0333,0.9559165,0.02480465,0.019278795,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,63.3,34000,37,Femenino,4.8,Permanencia
+HN-AUD-0334,0.13139577,0.7143609,0.15424329,Alto,Deloitte,Consultor,Consultoría,Profesional,24.4,36000,25,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0335,0.9261565,0.050334282,0.02350917,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,80.6,28500,39,Femenino,4.3,Permanencia
+HN-AUD-0336,0.17524406,0.733288,0.091467954,Alto,Deloitte,Analista de Consultoría,Consultoría,Operativo,7.1,25000,28,Masculino,4.4,Renuncia voluntaria
+HN-AUD-0337,0.4963749,0.44648597,0.05713909,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,52.8,20500,32,Femenino,3.9,Permanencia
+HN-AUD-0338,0.08227971,0.76714134,0.15057887,Alto,PwC,Analista de Consultoría,Consultoría,Operativo,30.9,20000,31,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0339,0.95713675,0.029225798,0.013637454,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,68.3,28000,37,Femenino,4.4,Permanencia
+HN-AUD-0340,0.05330557,0.6185079,0.32818654,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,25.7,36000,24,Masculino,3.6,Renuncia involuntaria
+HN-AUD-0341,0.15084763,0.70402825,0.14512411,Alto,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,6.3,24500,29,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0342,0.0423288,0.8128091,0.14486203,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,14.2,74000,36,Masculino,3.5,Renuncia voluntaria
+HN-AUD-0343,0.11489409,0.7488324,0.13627353,Alto,PwC,Auditor Senior,Auditoría,Profesional,9.2,39500,31,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0344,0.8951678,0.07940074,0.025431378,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,37.7,22000,37,Femenino,4.8,Permanencia
+HN-AUD-0345,0.8250002,0.121850215,0.053149574,Bajo,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,80.8,52000,22,Femenino,3.5,Permanencia
+HN-AUD-0346,0.31703714,0.55294424,0.1300186,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,16.6,25500,27,Femenino,4.2,Permanencia
+HN-AUD-0347,0.57384723,0.2224405,0.2037123,Bajo,PwC,Auditor Senior,Auditoría,Profesional,34.2,35000,29,Masculino,4.1,Renuncia involuntaria
+HN-AUD-0348,0.07456493,0.82152516,0.10390995,Alto,Deloitte,Analista de Consultoría,Consultoría,Operativo,11.6,24000,33,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0349,0.9439807,0.022218842,0.033800513,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,46.2,25000,36,Masculino,3.4,Permanencia
+HN-AUD-0350,0.09228458,0.8149915,0.09272388,Alto,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,13.3,68000,25,Femenino,4.7,Permanencia
+HN-AUD-0351,0.08499365,0.7523757,0.16263063,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,27.9,23500,28,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0352,0.8508235,0.11067486,0.03850158,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,37.4,34000,32,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0353,0.8779508,0.08335168,0.03869755,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,63.8,21500,21,Femenino,4.8,Permanencia
+HN-AUD-0354,0.935317,0.040515486,0.024167588,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,61.1,33000,26,Masculino,4.3,Permanencia
+HN-AUD-0355,0.883592,0.062704206,0.053703792,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,34.9,33500,25,Femenino,3.8,Permanencia
+HN-AUD-0356,0.26047304,0.66934955,0.070177406,Moderado,PwC,Supervisor de Auditoría,Auditoría,Mando medio,39.3,46500,27,Masculino,2.9,Renuncia voluntaria
+HN-AUD-0357,0.88301176,0.08494783,0.032040473,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,48.7,25000,24,Masculino,4.6,Permanencia
+HN-AUD-0358,0.7910508,0.14122574,0.06772344,Bajo,PwC,Consultor Senior,Consultoría,Profesional,57.5,40000,32,Masculino,4.6,Permanencia
+HN-AUD-0359,0.3091008,0.40861812,0.28228104,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,12.8,23500,31,Femenino,3.7,Renuncia involuntaria
+HN-AUD-0360,0.100143835,0.46090782,0.43894836,Moderado,KPMG,Gerente de Auditoría,Auditoría,Gerencial,9.6,66500,43,Masculino,4.5,Renuncia involuntaria
+HN-AUD-0361,0.94011706,0.042838626,0.017044324,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,64.7,22500,22,Femenino,4.3,Permanencia
+HN-AUD-0362,0.8141759,0.12639982,0.05942426,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,19.1,23000,45,Femenino,2.2,Permanencia
+HN-AUD-0363,0.6208369,0.18080962,0.19835348,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,26.5,24000,27,Femenino,4.9,Renuncia involuntaria
+HN-AUD-0364,0.6738142,0.23826624,0.08791961,Bajo,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,42.7,19500,21,Masculino,4.1,Permanencia
+HN-AUD-0365,0.686158,0.23757754,0.07626446,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,23.6,36000,38,Femenino,3.6,Permanencia
+HN-AUD-0366,0.028511837,0.7792469,0.19224124,Alto,PwC,Auditor Senior,Auditoría,Profesional,14.2,32500,37,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0367,0.09197328,0.8045211,0.10350557,Alto,Deloitte,Coordinador Administrativo,Apoyo administrativo,Mando medio,26.5,48000,33,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0368,0.052510295,0.7088966,0.23859313,Alto,KPMG,Analista de Consultoría,Consultoría,Operativo,20.6,25000,27,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0369,0.07072156,0.85362595,0.07565251,Alto,KPMG,Auditor Senior,Auditoría,Profesional,38.1,41500,29,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0370,0.07053559,0.7712205,0.15824386,Alto,KPMG,Auditor Senior,Auditoría,Profesional,10.1,43000,21,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0371,0.92642826,0.032705516,0.04086619,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,45.8,19000,27,Femenino,4.8,Permanencia
+HN-AUD-0372,0.850616,0.090357885,0.059026163,Bajo,PwC,Gerente de Impuestos,Impuestos,Gerencial,53.5,56500,24,Masculino,5.0,Permanencia
+HN-AUD-0373,0.93199706,0.041311882,0.026691118,Bajo,PwC,Consultor Fiscal,Impuestos,Profesional,71.5,37500,24,Masculino,2.7,Permanencia
+HN-AUD-0374,0.02769134,0.8682691,0.104039624,Alto,Deloitte,Analista de Consultoría,Consultoría,Operativo,18.0,23500,24,Femenino,4.4,Renuncia voluntaria
+HN-AUD-0375,0.04074141,0.85670155,0.10255709,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,23.7,20500,25,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0376,0.43038124,0.5162579,0.053360887,Moderado,PwC,Supervisor de Auditoría,Auditoría,Mando medio,20.5,53000,33,Masculino,3.7,Permanencia
+HN-AUD-0377,0.92407596,0.055816736,0.020107271,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,76.9,65500,25,Femenino,4.3,Permanencia
+HN-AUD-0378,0.05019322,0.735366,0.21444075,Alto,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,24.2,47500,28,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0379,0.83469844,0.120891266,0.044410344,Bajo,Deloitte,Consultor,Consultoría,Profesional,45.8,36500,32,Masculino,4.2,Permanencia
+HN-AUD-0380,0.9587993,0.020686721,0.020513935,Bajo,PwC,Auditor Senior,Auditoría,Profesional,67.7,28000,22,Femenino,3.1,Permanencia
+HN-AUD-0381,0.70084465,0.18888912,0.1102662,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,28.5,34000,31,Masculino,4.8,Permanencia
+HN-AUD-0382,0.9353337,0.043351926,0.021314388,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,39.9,22000,43,Femenino,3.8,Permanencia
+HN-AUD-0383,0.83566236,0.11732771,0.04700993,Bajo,KPMG,Consultor,Consultoría,Profesional,37.2,30500,39,Femenino,4.7,Permanencia
+HN-AUD-0384,0.02187856,0.7298092,0.24831226,Alto,PwC,Asistente de Impuestos,Impuestos,Operativo,9.3,27000,31,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0385,0.47206074,0.46415478,0.06378444,Moderado,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,16.1,49500,30,Femenino,3.5,Permanencia
+HN-AUD-0386,0.59183353,0.30772448,0.10044197,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,20.6,23000,33,Masculino,4.3,Renuncia involuntaria
+HN-AUD-0387,0.6268486,0.30781916,0.06533229,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,71.9,61500,32,Femenino,3.8,Permanencia
+HN-AUD-0388,0.056081526,0.82334375,0.120574735,Alto,Deloitte,Consultor,Consultoría,Profesional,7.8,39000,24,Masculino,3.6,Renuncia voluntaria
+HN-AUD-0389,0.18615378,0.68309426,0.13075194,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,12.6,23000,40,Masculino,2.5,Renuncia voluntaria
+HN-AUD-0390,0.03621973,0.8727969,0.09098337,Alto,Deloitte,Senior de Impuestos,Impuestos,Profesional,25.5,29000,30,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0391,0.8352337,0.07117025,0.09359601,Bajo,KPMG,Consultor Senior,Consultoría,Profesional,36.2,35500,32,Femenino,4.4,Renuncia involuntaria
+HN-AUD-0392,0.779306,0.054362807,0.16633123,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,27.5,25000,34,Masculino,3.9,Permanencia
+HN-AUD-0393,0.96457136,0.02137692,0.014051666,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,40.5,19000,22,Masculino,4.1,Permanencia
+HN-AUD-0394,0.6135058,0.3167239,0.06977035,Bajo,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,69.0,25500,25,Femenino,3.3,Permanencia
+HN-AUD-0395,0.15992504,0.55654985,0.28352505,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,10.3,25000,24,Masculino,2.8,Renuncia voluntaria
+HN-AUD-0396,0.9079191,0.048567407,0.04351342,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,59.6,20500,29,Femenino,3.4,Permanencia
+HN-AUD-0397,0.10126136,0.7038435,0.19489513,Alto,PwC,Director de Consultoría,Consultoría,Directivo,27.2,101500,27,Masculino,3.5,Renuncia involuntaria
+HN-AUD-0398,0.76872635,0.16288495,0.06838871,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,28.8,26000,34,Femenino,4.8,Permanencia
+HN-AUD-0399,0.84774005,0.08621857,0.066041395,Bajo,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,30.9,25000,30,Masculino,4.1,Permanencia
+HN-AUD-0400,0.23388807,0.5255055,0.24060647,Moderado,KPMG,Analista de Consultoría,Consultoría,Operativo,25.9,22500,38,Femenino,3.8,Renuncia involuntaria
+HN-AUD-0401,0.5480321,0.37631816,0.075649716,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,18.0,22000,38,Femenino,2.9,Renuncia voluntaria
+HN-AUD-0402,0.4728948,0.45865571,0.0684495,Moderado,KPMG,Consultor Senior,Consultoría,Profesional,73.4,31500,28,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0403,0.86459243,0.09874965,0.03665785,Bajo,PwC,Supervisor de Auditoría,Auditoría,Mando medio,34.6,48500,21,Femenino,3.5,Permanencia
+HN-AUD-0404,0.05234535,0.7316377,0.21601701,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,26.0,35000,33,Masculino,4.5,Renuncia voluntaria
+HN-AUD-0405,0.09684798,0.8336232,0.06952884,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,48.6,72500,30,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0406,0.068369314,0.88778436,0.04384626,Alto,PwC,Auditor Senior,Auditoría,Profesional,38.0,33500,25,Femenino,3.9,Renuncia involuntaria
+HN-AUD-0407,0.8058769,0.15375298,0.040370155,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,34.1,25500,29,Masculino,3.5,Permanencia
+HN-AUD-0408,0.30636784,0.63579863,0.057833545,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,52.6,21000,40,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0409,0.93692017,0.041944448,0.021135347,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,79.8,44500,38,Masculino,4.6,Permanencia
+HN-AUD-0410,0.8448517,0.11874354,0.03640477,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,31.6,24000,29,Femenino,4.0,Permanencia
+HN-AUD-0411,0.9302129,0.039666332,0.030120786,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,52.7,21500,33,Masculino,3.1,Permanencia
+HN-AUD-0412,0.9450967,0.03250221,0.02240115,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,80.1,26500,24,Femenino,4.1,Permanencia
+HN-AUD-0413,0.0389038,0.6191477,0.34194848,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,26.7,26000,21,Masculino,4.1,Renuncia involuntaria
+HN-AUD-0414,0.02389371,0.8126126,0.1634937,Alto,KPMG,Consultor,Consultoría,Profesional,20.3,35500,32,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0415,0.1690996,0.691924,0.13897644,Moderado,KPMG,Coordinador Administrativo,Apoyo administrativo,Mando medio,11.6,45500,26,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0416,0.8913729,0.07583888,0.032788165,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,83.4,23000,36,Femenino,3.7,Permanencia
+HN-AUD-0417,0.24931534,0.5774368,0.17324789,Moderado,Deloitte,Analista Administrativo,Apoyo administrativo,Operativo,33.8,23500,28,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0418,0.028768094,0.8646856,0.106546335,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,34.8,64000,23,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0419,0.09662579,0.7260585,0.17731576,Alto,PwC,Asistente de Impuestos,Impuestos,Operativo,7.0,27500,28,Femenino,5.0,Renuncia voluntaria
+HN-AUD-0420,0.8911731,0.073113635,0.03571324,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,51.6,23500,34,Masculino,4.2,Permanencia
+HN-AUD-0421,0.8430798,0.11396453,0.04295564,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,73.9,24500,21,Masculino,4.2,Permanencia
+HN-AUD-0422,0.8792344,0.089690045,0.03107563,Bajo,PwC,Auditor Senior,Auditoría,Profesional,83.0,31500,29,Masculino,3.9,Permanencia
+HN-AUD-0423,0.104571685,0.63089126,0.26453704,Moderado,Deloitte,Auditor Senior,Auditoría,Profesional,10.9,39500,24,Femenino,4.1,Permanencia
+HN-AUD-0424,0.9455941,0.036011517,0.018394386,Bajo,PwC,Asistente de Impuestos,Impuestos,Operativo,83.5,20500,25,Femenino,4.1,Permanencia
+HN-AUD-0425,0.022851648,0.83162284,0.14552552,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,8.0,24000,31,Masculino,3.7,Renuncia voluntaria
+HN-AUD-0426,0.03897414,0.9273858,0.033640083,Alto,KPMG,Gerente de Consultoría,Consultoría,Gerencial,29.4,64000,26,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0427,0.6938578,0.27503964,0.031102551,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,29.4,70000,37,Masculino,4.2,Permanencia
+HN-AUD-0428,0.6713965,0.20622064,0.12238281,Bajo,PwC,Auditor Senior,Auditoría,Profesional,20.9,31500,24,Masculino,3.4,Permanencia
+HN-AUD-0429,0.06052198,0.75293857,0.18653946,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,21.1,25500,34,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0430,0.83548254,0.09789583,0.06662168,Bajo,PwC,Jefe Administrativo,Apoyo administrativo,Gerencial,19.1,68000,32,Masculino,4.2,Permanencia
+HN-AUD-0431,0.032866884,0.49848855,0.46864456,Moderado,Deloitte,Consultor Senior,Consultoría,Profesional,8.4,31000,33,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0432,0.13108638,0.48878214,0.3801315,Moderado,KPMG,Consultor Senior,Consultoría,Profesional,36.3,33500,44,Masculino,2.9,Renuncia involuntaria
+HN-AUD-0433,0.823675,0.08833429,0.08799074,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,47.2,23000,30,Masculino,3.6,Renuncia involuntaria
+HN-AUD-0434,0.19275035,0.67536753,0.13188213,Moderado,KPMG,Analista de Consultoría,Consultoría,Operativo,15.8,24000,37,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0435,0.67894906,0.24226141,0.07878948,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,29.2,23500,38,Femenino,4.5,Permanencia
+HN-AUD-0436,0.020117147,0.9479858,0.03189706,Alto,PwC,Supervisor de Auditoría,Auditoría,Mando medio,19.3,48000,28,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0437,0.022256752,0.81820065,0.15954256,Alto,PwC,Gerente de Consultoría,Consultoría,Gerencial,6.3,69000,27,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0438,0.8809284,0.071158096,0.047913473,Bajo,Deloitte,Director de Auditoría,Auditoría,Directivo,76.1,106000,32,Masculino,3.7,Permanencia
+HN-AUD-0439,0.95984507,0.018810343,0.02134457,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,76.4,26500,33,Masculino,4.0,Permanencia
+HN-AUD-0440,0.7366144,0.20348956,0.05989609,Bajo,KPMG,Gerente de Impuestos,Impuestos,Gerencial,17.3,67000,31,Masculino,4.2,Permanencia
+HN-AUD-0441,0.12742302,0.67858696,0.19398998,Moderado,KPMG,Consultor,Consultoría,Profesional,19.0,33000,26,Masculino,4.5,Renuncia involuntaria
+HN-AUD-0442,0.6189772,0.2960961,0.08492672,Bajo,KPMG,Consultor,Consultoría,Profesional,14.9,37500,31,Masculino,4.1,Permanencia
+HN-AUD-0443,0.95970505,0.021944173,0.018350808,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,75.7,25500,23,Masculino,3.9,Permanencia
+HN-AUD-0444,0.18305299,0.45495167,0.3619953,Moderado,PwC,Consultor,Consultoría,Profesional,7.8,34000,21,Femenino,4.0,Renuncia involuntaria
+HN-AUD-0445,0.06534305,0.36497423,0.5696827,Bajo,KPMG,Analista Administrativo,Apoyo administrativo,Operativo,7.1,23500,30,Femenino,4.0,Renuncia involuntaria
+HN-AUD-0446,0.41428623,0.4782257,0.107488096,Moderado,Deloitte,Director de Auditoría,Auditoría,Directivo,41.2,111500,25,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0447,0.8733379,0.095402785,0.031259254,Bajo,PwC,Consultor Senior,Consultoría,Profesional,81.3,36000,32,Femenino,3.9,Permanencia
+HN-AUD-0448,0.9183582,0.047972955,0.033668865,Bajo,KPMG,Consultor Senior,Consultoría,Profesional,48.0,40000,30,Femenino,4.0,Permanencia
+HN-AUD-0449,0.90601057,0.0658528,0.028136564,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,40.2,44000,46,Femenino,4.9,Permanencia
+HN-AUD-0450,0.2026389,0.62250715,0.17485397,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,18.7,37000,25,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0451,0.30430207,0.5610309,0.13466707,Moderado,PwC,Auditor Senior,Auditoría,Profesional,10.3,38500,34,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0452,0.81609184,0.14567192,0.038236234,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,19.4,22000,33,Femenino,5.0,Permanencia
+HN-AUD-0453,0.93081754,0.04440535,0.02477713,Bajo,PwC,Auditor Senior,Auditoría,Profesional,55.4,37000,29,Femenino,4.2,Permanencia
+HN-AUD-0454,0.23724514,0.65683335,0.105921544,Moderado,PwC,Coordinador Administrativo,Apoyo administrativo,Mando medio,19.8,49000,29,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0455,0.9482142,0.027821636,0.023964243,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,51.1,23000,30,Femenino,4.0,Permanencia
+HN-AUD-0456,0.9478893,0.02547608,0.026634596,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,63.0,28000,31,Masculino,4.2,Permanencia
+HN-AUD-0457,0.94244426,0.028936427,0.028619293,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,47.6,25500,23,Masculino,3.4,Permanencia
+HN-AUD-0458,0.22606409,0.6409267,0.13300923,Moderado,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,8.3,21500,29,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0459,0.96167207,0.02110111,0.017226841,Bajo,KPMG,Consultor Fiscal,Impuestos,Profesional,37.7,31000,28,Masculino,4.2,Permanencia
+HN-AUD-0460,0.7175851,0.22740513,0.055009764,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,31.5,22000,33,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0461,0.8436294,0.09369119,0.06267942,Bajo,PwC,Consultor,Consultoría,Profesional,39.5,36000,28,Femenino,4.2,Permanencia
+HN-AUD-0462,0.7135261,0.21210222,0.074371606,Bajo,Deloitte,Consultor,Consultoría,Profesional,16.4,37500,31,Femenino,4.6,Permanencia
+HN-AUD-0463,0.8702394,0.06751816,0.062242478,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,21.8,23500,34,Femenino,3.8,Permanencia
+HN-AUD-0464,0.84032744,0.1116439,0.0480287,Bajo,KPMG,Gerente de Consultoría,Consultoría,Gerencial,22.6,69500,28,Femenino,3.5,Permanencia
+HN-AUD-0465,0.63159114,0.32926556,0.039143264,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,75.8,48000,30,Masculino,4.3,Permanencia
+HN-AUD-0466,0.13843031,0.58637756,0.2751921,Moderado,PwC,Asistente de Impuestos,Impuestos,Operativo,10.6,23000,41,Masculino,3.3,Renuncia involuntaria
+HN-AUD-0467,0.019802313,0.5868714,0.3933263,Moderado,PwC,Consultor,Consultoría,Profesional,10.3,36500,31,Femenino,4.1,Renuncia involuntaria
+HN-AUD-0468,0.89642894,0.05619987,0.047371183,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,62.9,24000,21,Masculino,4.4,Permanencia
+HN-AUD-0469,0.04055096,0.8176436,0.14180546,Alto,KPMG,Asistente de Impuestos,Impuestos,Operativo,8.4,25000,39,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0470,0.0662591,0.8446811,0.08905981,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,28.0,24500,22,Masculino,3.4,Renuncia voluntaria
+HN-AUD-0471,0.9321612,0.025560843,0.042278003,Bajo,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,56.3,27500,29,Femenino,2.7,Permanencia
+HN-AUD-0472,0.9528925,0.029136589,0.017970972,Bajo,PwC,Analista de Consultoría,Consultoría,Operativo,82.7,25000,35,Femenino,3.9,Permanencia
+HN-AUD-0473,0.88447785,0.090157814,0.025364371,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,53.3,50500,21,Masculino,4.5,Permanencia
+HN-AUD-0474,0.16604573,0.76226884,0.071685396,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,46.4,35500,21,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0475,0.86956066,0.09634878,0.034090564,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,36.3,63000,22,Masculino,4.1,Permanencia
+HN-AUD-0476,0.83674926,0.113441564,0.0498092,Bajo,Deloitte,Senior de Impuestos,Impuestos,Profesional,47.4,38000,37,Femenino,2.9,Permanencia
+HN-AUD-0477,0.06691831,0.3465537,0.586528,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,14.0,32000,38,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0478,0.55578005,0.324905,0.119314946,Bajo,PwC,Consultor,Consultoría,Profesional,18.7,40000,32,Masculino,4.0,Permanencia
+HN-AUD-0479,0.5031759,0.28876102,0.20806307,Bajo,KPMG,Consultor Fiscal,Impuestos,Profesional,14.6,34500,29,Femenino,2.9,Permanencia
+HN-AUD-0480,0.4314973,0.29373443,0.2747682,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,15.1,26500,35,Femenino,3.7,Permanencia
+HN-AUD-0481,0.07948288,0.77845204,0.14206502,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,8.0,24500,21,Femenino,4.2,Permanencia
+HN-AUD-0482,0.13122085,0.50509036,0.36368877,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,9.9,24000,31,Masculino,3.5,Renuncia involuntaria
+HN-AUD-0483,0.28159353,0.6052131,0.11319334,Moderado,Deloitte,Coordinador Administrativo,Apoyo administrativo,Mando medio,28.4,47500,26,Femenino,3.4,Renuncia voluntaria
+HN-AUD-0484,0.13871321,0.7609675,0.10031928,Alto,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,11.2,19000,26,Femenino,4.5,Renuncia involuntaria
+HN-AUD-0485,0.8488984,0.11126995,0.03983157,Bajo,PwC,Gerente de Impuestos,Impuestos,Gerencial,35.0,70000,34,Masculino,4.3,Permanencia
+HN-AUD-0486,0.864052,0.101940826,0.03400715,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,47.9,25500,35,Masculino,4.6,Permanencia
+HN-AUD-0487,0.18002033,0.6862525,0.13372724,Moderado,PwC,Gerente de Consultoría,Consultoría,Gerencial,6.4,71000,28,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0488,0.88165224,0.05809146,0.06025627,Bajo,PwC,Auditor Senior,Auditoría,Profesional,34.6,35500,30,Masculino,4.3,Permanencia
+HN-AUD-0489,0.90095264,0.042798564,0.056248825,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,49.1,34500,21,Femenino,4.7,Permanencia
+HN-AUD-0490,0.87462264,0.1006216,0.024755785,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,54.8,20000,43,Femenino,4.1,Permanencia
+HN-AUD-0491,0.9501955,0.0310321,0.018772414,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,62.5,23000,25,Femenino,4.7,Permanencia
+HN-AUD-0492,0.8752477,0.08569518,0.039057117,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,83.7,29000,34,Femenino,4.3,Permanencia
+HN-AUD-0493,0.115958445,0.3138256,0.57021594,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,18.9,20500,26,Masculino,5.0,Renuncia involuntaria
+HN-AUD-0494,0.542193,0.38947833,0.068328634,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,17.9,67500,40,Femenino,4.0,Permanencia
+HN-AUD-0495,0.9522128,0.033848003,0.013939254,Bajo,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,40.5,24000,35,Femenino,4.6,Permanencia
+HN-AUD-0496,0.9329327,0.044020407,0.02304691,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,29.7,23500,32,Femenino,4.2,Permanencia
+HN-AUD-0497,0.26319936,0.6145977,0.12220301,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,22.9,25000,27,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0498,0.73520225,0.1515428,0.11325496,Bajo,KPMG,Analista de Consultoría,Consultoría,Operativo,18.9,27000,21,Femenino,3.7,Permanencia
+HN-AUD-0499,0.028122757,0.644483,0.32739425,Moderado,Deloitte,Asistente de Impuestos,Impuestos,Operativo,15.1,26000,28,Masculino,4.3,Renuncia voluntaria
+HN-AUD-0500,0.0969035,0.82533437,0.07776207,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,8.4,73500,25,Femenino,3.4,Renuncia voluntaria
+HN-AUD-0501,0.7431377,0.20964126,0.047221035,Bajo,Deloitte,Coordinador Administrativo,Apoyo administrativo,Mando medio,76.4,48500,43,Femenino,3.7,Permanencia
+HN-AUD-0502,0.038413465,0.83385146,0.12773506,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,27.2,52000,21,Femenino,3.1,Renuncia voluntaria
+HN-AUD-0503,0.19091116,0.6822984,0.1267904,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,19.3,26000,32,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0504,0.6962754,0.21764934,0.08607524,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,38.5,33500,39,Femenino,3.9,Permanencia
+HN-AUD-0505,0.07259297,0.8271908,0.10021624,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,34.6,26500,31,Femenino,4.5,Renuncia voluntaria
+HN-AUD-0506,0.9552735,0.03104528,0.013681259,Bajo,KPMG,Coordinador Administrativo,Apoyo administrativo,Mando medio,71.0,53000,29,Femenino,4.5,Permanencia
+HN-AUD-0507,0.92808384,0.045046292,0.026869955,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,52.8,56500,27,Femenino,4.0,Permanencia
+HN-AUD-0508,0.8989433,0.075327575,0.025729157,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,38.8,40000,32,Femenino,3.9,Permanencia
+HN-AUD-0509,0.2057605,0.4103162,0.38392332,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,24.8,24000,21,Masculino,4.4,Renuncia involuntaria
+HN-AUD-0510,0.7743386,0.17154717,0.054114252,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,33.3,23000,26,Masculino,4.4,Permanencia
+HN-AUD-0511,0.93596,0.04659604,0.017444002,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,64.4,46500,26,Femenino,4.4,Permanencia
+HN-AUD-0512,0.032318782,0.74355245,0.22412878,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,20.1,69000,29,Femenino,3.5,Renuncia voluntaria
+HN-AUD-0513,0.3917507,0.55678314,0.05146616,Moderado,KPMG,Consultor Senior,Consultoría,Profesional,24.9,38000,21,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0514,0.93875474,0.040250435,0.020994857,Bajo,PwC,Supervisor de Auditoría,Auditoría,Mando medio,66.3,50000,37,Femenino,4.0,Permanencia
+HN-AUD-0515,0.48759893,0.4075204,0.10488067,Moderado,Deloitte,Analista de Consultoría,Consultoría,Operativo,46.8,27000,33,Masculino,4.2,Permanencia
+HN-AUD-0516,0.059320774,0.88943344,0.05124574,Alto,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,8.0,46000,39,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0517,0.94846684,0.028090285,0.023442797,Bajo,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,39.0,25500,33,Femenino,4.7,Permanencia
+HN-AUD-0518,0.94421256,0.03055766,0.02522983,Bajo,PwC,Gerente de Auditoría,Auditoría,Gerencial,59.3,78000,34,Femenino,5.0,Permanencia
+HN-AUD-0519,0.8564091,0.10161023,0.04198076,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,44.2,69000,28,Femenino,3.2,Permanencia
+HN-AUD-0520,0.5652492,0.26382318,0.1709276,Bajo,PwC,Auditor Senior,Auditoría,Profesional,16.8,37000,32,Femenino,3.1,Renuncia involuntaria
+HN-AUD-0521,0.5745431,0.3754236,0.05003326,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,28.0,48500,32,Femenino,3.3,Renuncia voluntaria
+HN-AUD-0522,0.18723544,0.7349706,0.07779393,Alto,Deloitte,Director de Auditoría,Auditoría,Directivo,54.5,104500,29,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0523,0.7933678,0.111290075,0.09534213,Bajo,Deloitte,Consultor Fiscal,Impuestos,Profesional,48.1,42000,29,Masculino,3.2,Permanencia
+HN-AUD-0524,0.9431204,0.028904323,0.027975325,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,54.0,19500,22,Masculino,3.3,Permanencia
+HN-AUD-0525,0.08652056,0.85975194,0.053727575,Alto,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,6.0,44000,41,Masculino,3.9,Renuncia voluntaria
+HN-AUD-0526,0.069624946,0.68272907,0.24764599,Moderado,Deloitte,Consultor Senior,Consultoría,Profesional,23.5,32000,37,Masculino,4.9,Renuncia voluntaria
+HN-AUD-0527,0.928447,0.040693045,0.03085989,Bajo,KPMG,Senior de Impuestos,Impuestos,Profesional,46.3,36500,35,Masculino,3.6,Permanencia
+HN-AUD-0528,0.047723103,0.6498939,0.30238307,Moderado,KPMG,Consultor,Consultoría,Profesional,11.4,32500,25,Femenino,3.6,Renuncia voluntaria
+HN-AUD-0529,0.064365044,0.8624018,0.073233135,Alto,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,9.9,45000,40,Masculino,3.5,Renuncia voluntaria
+HN-AUD-0530,0.880805,0.058444187,0.06075077,Bajo,PwC,Consultor Senior,Consultoría,Profesional,61.9,38500,32,Femenino,4.7,Renuncia involuntaria
+HN-AUD-0531,0.9581811,0.031044,0.010774882,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,68.1,31000,38,Femenino,4.7,Permanencia
+HN-AUD-0532,0.91951513,0.0483694,0.0321154,Bajo,KPMG,Asistente de Auditoría,Auditoría,Operativo,41.0,22000,26,Masculino,3.8,Permanencia
+HN-AUD-0533,0.7098695,0.25020993,0.039920602,Bajo,KPMG,Gerente de Impuestos,Impuestos,Gerencial,23.1,82000,34,Femenino,3.8,Permanencia
+HN-AUD-0534,0.8821701,0.06025095,0.057579048,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,47.0,22500,31,Femenino,3.4,Renuncia involuntaria
+HN-AUD-0535,0.19465756,0.580931,0.22441144,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,8.7,21000,26,Masculino,3.5,Renuncia voluntaria
+HN-AUD-0536,0.8163454,0.14332928,0.04032529,Bajo,Deloitte,Coordinador Administrativo,Apoyo administrativo,Mando medio,58.2,46500,23,Femenino,4.3,Permanencia
+HN-AUD-0537,0.5174475,0.43216813,0.050384395,Moderado,PwC,Senior de Impuestos,Impuestos,Profesional,68.2,40000,38,Masculino,4.8,Renuncia voluntaria
+HN-AUD-0538,0.024226425,0.9505481,0.025225436,Alto,PwC,Supervisor de Auditoría,Auditoría,Mando medio,28.2,53500,21,Femenino,4.9,Renuncia voluntaria
+HN-AUD-0539,0.9449229,0.03476661,0.020310525,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,69.6,25500,28,Masculino,4.0,Permanencia
+HN-AUD-0540,0.94275665,0.026437905,0.03080549,Bajo,Deloitte,Asistente de Impuestos,Impuestos,Operativo,49.1,22000,27,Masculino,4.0,Permanencia
+HN-AUD-0541,0.2324475,0.7189229,0.04862963,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,35.1,78000,46,Masculino,4.4,Renuncia voluntaria
+HN-AUD-0542,0.11892407,0.73626286,0.1448131,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,39.2,22000,27,Masculino,4.3,Renuncia voluntaria
+HN-AUD-0543,0.9522916,0.033422027,0.0142864445,Bajo,PwC,Auditor Senior,Auditoría,Profesional,71.3,34000,40,Femenino,3.5,Permanencia
+HN-AUD-0544,0.31495026,0.5746422,0.11040751,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,45.0,22000,30,Femenino,4.9,Permanencia
+HN-AUD-0545,0.14457388,0.7733623,0.082063824,Alto,KPMG,Gerente de Auditoría,Auditoría,Gerencial,37.6,69000,32,Femenino,4.7,Renuncia voluntaria
+HN-AUD-0546,0.15791295,0.65561956,0.18646748,Moderado,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,6.5,50500,22,Masculino,4.6,Renuncia voluntaria
+HN-AUD-0547,0.029869698,0.88258636,0.087543994,Alto,PwC,Asistente de Auditoría,Auditoría,Operativo,21.8,26500,26,Masculino,4.1,Renuncia voluntaria
+HN-AUD-0548,0.5401325,0.4006646,0.05920287,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,66.0,24500,21,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0549,0.026925823,0.83575374,0.13732047,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,16.8,19500,40,Femenino,4.0,Renuncia voluntaria
+HN-AUD-0550,0.020421682,0.6304206,0.34915775,Moderado,PwC,Asistente Administrativo,Apoyo administrativo,Operativo,13.6,21500,25,Femenino,4.1,Renuncia involuntaria
+HN-AUD-0551,0.86644286,0.08530955,0.048247613,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,34.5,70000,26,Femenino,4.6,Permanencia
+HN-AUD-0552,0.06894966,0.8588172,0.07223315,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,12.0,23000,27,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0553,0.7033669,0.21146636,0.08516679,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,15.1,36000,31,Femenino,3.6,Permanencia
+HN-AUD-0554,0.15239947,0.72396845,0.12363204,Alto,Deloitte,Asistente de Auditoría,Auditoría,Operativo,10.8,22000,40,Masculino,5.0,Renuncia voluntaria
+HN-AUD-0555,0.53530586,0.35369048,0.11100369,Bajo,PwC,Supervisor de Auditoría,Auditoría,Mando medio,12.0,47000,30,Femenino,4.4,Permanencia
+HN-AUD-0556,0.60923034,0.32796222,0.06280747,Bajo,Deloitte,Gerente de Auditoría,Auditoría,Gerencial,53.8,70500,34,Masculino,4.2,Permanencia
+HN-AUD-0557,0.93971527,0.036941465,0.023343282,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,62.3,35500,31,Masculino,4.4,Permanencia
+HN-AUD-0558,0.15428635,0.5600778,0.2856358,Moderado,KPMG,Asistente de Impuestos,Impuestos,Operativo,7.0,27500,31,Masculino,4.6,Permanencia
+HN-AUD-0559,0.20551421,0.6628217,0.13166405,Moderado,Deloitte,Analista de Consultoría,Consultoría,Operativo,54.2,22000,33,Masculino,3.8,Renuncia voluntaria
+HN-AUD-0560,0.9589774,0.027090484,0.013932129,Bajo,KPMG,Consultor Fiscal,Impuestos,Profesional,70.9,33000,29,Femenino,4.4,Permanencia
+HN-AUD-0561,0.55624396,0.38120827,0.06254775,Bajo,KPMG,Gerente de Auditoría,Auditoría,Gerencial,18.3,68000,32,Masculino,3.2,Permanencia
+HN-AUD-0562,0.9416982,0.03657279,0.021728965,Bajo,KPMG,Auditor Senior,Auditoría,Profesional,69.7,37500,35,Femenino,4.1,Permanencia
+HN-AUD-0563,0.23920351,0.6526631,0.10813335,Moderado,PwC,Supervisor de Auditoría,Auditoría,Mando medio,48.5,52500,28,Masculino,3.4,Renuncia voluntaria
+HN-AUD-0564,0.26810575,0.35627678,0.37561744,Bajo,PwC,Senior de Impuestos,Impuestos,Profesional,8.7,32500,33,Masculino,3.2,Permanencia
+HN-AUD-0565,0.014023938,0.82318115,0.16279487,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,9.9,25000,38,Femenino,5.0,Renuncia voluntaria
+HN-AUD-0566,0.9533863,0.032955606,0.01365808,Bajo,PwC,Gerente de Consultoría,Consultoría,Gerencial,74.4,76500,32,Femenino,4.8,Permanencia
+HN-AUD-0567,0.1678294,0.43779242,0.39437824,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,18.6,26000,30,Masculino,4.1,Renuncia involuntaria
+HN-AUD-0568,0.93477225,0.043270964,0.02195677,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,56.8,23000,35,Masculino,4.2,Permanencia
+HN-AUD-0569,0.8971262,0.049636208,0.05323756,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,47.8,43000,31,Masculino,4.1,Permanencia
+HN-AUD-0570,0.089278586,0.48657593,0.42414555,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,6.6,32000,36,Femenino,4.1,Renuncia voluntaria
+HN-AUD-0571,0.062498335,0.792191,0.14531061,Alto,PwC,Supervisor de Auditoría,Auditoría,Mando medio,42.3,48000,36,Femenino,3.2,Renuncia voluntaria
+HN-AUD-0572,0.9186247,0.061589465,0.019785821,Bajo,KPMG,Asistente de Impuestos,Impuestos,Operativo,79.0,21000,37,Masculino,3.6,Permanencia
+HN-AUD-0573,0.95273286,0.029533235,0.017733905,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,70.6,54000,44,Femenino,4.2,Permanencia
+HN-AUD-0574,0.37217814,0.5478068,0.08001506,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,54.7,22500,32,Masculino,4.6,Renuncia voluntaria
+HN-AUD-0575,0.7570312,0.1647381,0.07823068,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,29.0,30000,28,Masculino,3.2,Permanencia
+HN-AUD-0576,0.91194123,0.047850654,0.040208116,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,69.8,23500,31,Masculino,3.7,Renuncia involuntaria
+HN-AUD-0577,0.14366665,0.66993886,0.1863945,Moderado,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,8.9,26000,21,Masculino,4.2,Renuncia voluntaria
+HN-AUD-0578,0.8402621,0.12531862,0.0344193,Bajo,PwC,Auditor Senior,Auditoría,Profesional,60.2,36500,30,Masculino,4.0,Renuncia voluntaria
+HN-AUD-0579,0.06679105,0.877509,0.05569988,Alto,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,38.5,52500,37,Femenino,4.2,Renuncia voluntaria
+HN-AUD-0580,0.09161825,0.6373365,0.2710452,Moderado,KPMG,Asistente de Impuestos,Impuestos,Operativo,9.9,24500,45,Masculino,3.7,Permanencia
+HN-AUD-0581,0.9249462,0.057197325,0.017856488,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,67.4,19500,38,Femenino,4.2,Permanencia
+HN-AUD-0582,0.9031376,0.056987073,0.03987523,Bajo,Deloitte,Analista de Consultoría,Consultoría,Operativo,22.0,20500,33,Femenino,3.3,Permanencia
+HN-AUD-0583,0.8978366,0.05799957,0.044163775,Bajo,Deloitte,Asistente de Auditoría,Auditoría,Operativo,73.3,25500,21,Masculino,3.6,Permanencia
+HN-AUD-0584,0.12960309,0.6279199,0.242477,Moderado,Deloitte,Asistente de Auditoría,Auditoría,Operativo,21.2,22500,37,Femenino,3.7,Renuncia voluntaria
+HN-AUD-0585,0.7100196,0.23932667,0.050653715,Bajo,Deloitte,Supervisor de Auditoría,Auditoría,Mando medio,23.4,50500,36,Masculino,4.2,Permanencia
+HN-AUD-0586,0.72545105,0.22525512,0.049293876,Bajo,Deloitte,Senior de Impuestos,Impuestos,Profesional,30.3,37000,29,Femenino,4.8,Renuncia voluntaria
+HN-AUD-0587,0.064069055,0.65011114,0.28581986,Moderado,KPMG,Auditor Senior,Auditoría,Profesional,17.6,35000,38,Femenino,4.3,Renuncia voluntaria
+HN-AUD-0588,0.9323238,0.04008265,0.02759349,Bajo,Deloitte,Auditor Senior,Auditoría,Profesional,37.0,37000,34,Femenino,4.6,Permanencia
+HN-AUD-0589,0.9230837,0.04505006,0.031866293,Bajo,Deloitte,Asistente Administrativo,Apoyo administrativo,Operativo,50.3,21500,21,Femenino,5.0,Permanencia
+HN-AUD-0590,0.20509607,0.57381636,0.22108757,Moderado,Deloitte,Coordinador Administrativo,Apoyo administrativo,Mando medio,7.6,40000,38,Femenino,3.2,Permanencia
+HN-AUD-0591,0.026762156,0.8785053,0.094732575,Alto,Deloitte,Auditor Senior,Auditoría,Profesional,9.9,40000,38,Femenino,3.9,Renuncia voluntaria
+HN-AUD-0592,0.1494118,0.7238752,0.1267129,Alto,KPMG,Asistente de Auditoría,Auditoría,Operativo,8.4,28500,37,Masculino,3.3,Renuncia voluntaria
+HN-AUD-0593,0.895026,0.073402025,0.031571988,Bajo,PwC,Asistente de Auditoría,Auditoría,Operativo,37.8,22500,24,Masculino,3.8,Permanencia
+HN-AUD-0594,0.92290384,0.033329025,0.04376715,Bajo,KPMG,Asistente Administrativo,Apoyo administrativo,Operativo,36.8,23000,36,Masculino,5.0,Permanencia
+HN-AUD-0595,0.61312944,0.31759527,0.069275334,Bajo,Deloitte,Consultor Senior,Consultoría,Profesional,55.3,30500,21,Masculino,4.2,Permanencia
+HN-AUD-0596,0.2849706,0.63262105,0.08240829,Moderado,PwC,Supervisor de Auditoría,Auditoría,Mando medio,23.8,52000,21,Femenino,4.4,Renuncia involuntaria
+HN-AUD-0597,0.5204755,0.4086659,0.07085859,Moderado,PwC,Consultor Fiscal,Impuestos,Profesional,29.0,35500,28,Femenino,4.7,Permanencia
+HN-AUD-0598,0.5940348,0.36551645,0.04044875,Bajo,KPMG,Supervisor de Auditoría,Auditoría,Mando medio,34.2,44500,40,Masculino,3.6,Renuncia voluntaria
+HN-AUD-0599,0.30766332,0.52682626,0.16551043,Moderado,PwC,Asistente de Auditoría,Auditoría,Operativo,6.2,25500,32,Femenino,3.8,Renuncia voluntaria
+HN-AUD-0600,0.1404662,0.6594492,0.20008461,Moderado,KPMG,Asistente de Auditoría,Auditoría,Operativo,19.5,28000,41,Femenino,4.5,Renuncia involuntaria
