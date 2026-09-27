@@ -57,7 +57,6 @@ class BaselineModelSelector:
         }
 
     def _calcular_metricas(self, y_true, y_pred, y_proba) -> dict:
-        """Calcula el conjunto de metricas relevantes."""
         return {
             "accuracy": accuracy_score(y_true, y_pred),
             "precision_macro": precision_score(y_true, y_pred, average="macro", zero_division=0),
@@ -69,7 +68,6 @@ class BaselineModelSelector:
 
     def entrenar_todos(self, X_train, y_train, X_val, y_val, verbose=True):
         """
-       Proceso de entrenamiento cada modelo y calcula metricas sobre validacion
         """
         print("\n" + "=" * 78)
         print("ENTRENAMIENTO DE MODELOS BASELINE")
@@ -112,7 +110,6 @@ class BaselineModelSelector:
         return self.resultados
 
     def tabla_comparativa(self) -> "pd.DataFrame":
-        """Devuelve una tabla comparativa ordenada por ROC-AUC."""
         import pandas as pd
 
         filas = []
@@ -152,7 +149,6 @@ class BaselineModelSelector:
             print(f"  {clases[i][:28]:<30}{valores}")
 
     def imprimir_reporte_clasificacion(self, nombre: str, y_val):
-        """Imprime el reporte completo de clasificacion."""
         y_pred = self.resultados[nombre]["y_pred"]
         clases = [TARGET_INV_MAP[i] for i in range(len(TARGET_INV_MAP))]
 

@@ -10,46 +10,29 @@ from config import FIGURES_DIR, TARGET_INV_MAP
 
 
 class ShapAnalyzer:
-    """
-    Encapsula el calculo y visualizacion de SHAP values.
-    """
+   
 
     def __init__(self, modelo, feature_names, class_names=None):
-        """
-        Args:
-            modelo: modelo entrenado (XGBoost, LightGBM, etc.)
-            feature_names: lista con los nombres de las features
-            class_names: lista con los nombres de las clases
-        """
+       
         self.modelo = modelo
         self.feature_names = list(feature_names)
         self.class_names = class_names or [TARGET_INV_MAP[i] for i in range(3)]
         self.explainer = None
         self.shap_values = None
 
-    # -----------------------------------------------------
-    # 1. Calcular SHAP values
-    # -----------------------------------------------------
+   
     def calcular(self, X, verbose: bool = True):
-        """
-        Calcula SHAP values con TreeExplainer.
-        Retorna la lista de matrices (una por clase).
-        """
+       
         if verbose:
             print(f"\n  Calculando SHAP values sobre {X.shape[0]} registros...")
 
         self.explainer = shap.TreeExplainer(self.modelo)
         shap_values = self.explainer.shap_values(X)
 
-        # Normalizar a lista de matrices (una por clase)
-        # Algunas versiones de XGBoost + SHAP devuelven:
-        #   - lista de arrays (lo esperado)
-        #   - array 3D (n_samples, n_features, n_classes)
-        #   - lista de listas (raras)
+       
         if isinstance(shap_values, np.ndarray) and shap_values.ndim == 3:
             shap_values = [shap_values[:, :, i] for i in range(shap_values.shape[2])]
         elif isinstance(shap_values, list) and len(shap_values) > 0:
-            # Si es lista pero cada elemento tiene dimensiones raras, normalizar
             shap_values = [np.asarray(sv) for sv in shap_values]
 
         self.shap_values = shap_values
@@ -61,14 +44,9 @@ class ShapAnalyzer:
 
         return shap_values
 
-    # -----------------------------------------------------
-    # 2. Importancia global (mean |SHAP|)
-    # -----------------------------------------------------
+   
     def importancia_global(self, clase_idx: int = 1) -> pd.DataFrame:
-        """
-        Devuelve un DataFrame con la importancia media absoluta por feature.
-        Por defecto usa la clase 1 (Renuncia voluntaria).
-        """
+        
         if self.shap_values is None:
             raise ValueError("Primero llama a calcular().")
 
@@ -80,13 +58,9 @@ class ShapAnalyzer:
 
         return df
 
-    # -----------------------------------------------------
-    # 3. Grafico summary (beeswarm)
-    # -----------------------------------------------------
+   
     def plot_summary(self, X, clase_idx: int = 1, max_display: int = 20) -> Path:
-        """
-        Genera el summary plot (beeswarm) para una clase.
-        """
+   
         plt.figure(figsize=(11, 8))
         shap.summary_plot(
             self.shap_values[clase_idx],
@@ -108,14 +82,9 @@ class ShapAnalyzer:
         plt.close()
         return ruta
 
-    # -----------------------------------------------------
-    # 4. Grafico bar (importancia media)
-    # -----------------------------------------------------
+    
     def plot_importancia_bar(self, clase_idx: int = 1, top_n: int = 20) -> Path:
-        """
-        Genera un grafico de barras con la importancia media |SHAP|.
-        No requiere X porque usa self.shap_values internamente.
-        """
+       
         df = self.importancia_global(clase_idx).head(top_n)
 
         plt.figure(figsize=(10, max(5, top_n * 0.35)))
@@ -134,14 +103,9 @@ class ShapAnalyzer:
         plt.close()
         return ruta
 
-    # -----------------------------------------------------
-    # 5. Dependencia de una feature especifica
-    # -----------------------------------------------------
+   
     def plot_dependence(self, feature_name: str, X, clase_idx: int = 1) -> Path:
-        """
-        Genera un dependence plot para una feature especifica.
-        Requiere X (valores reales) para colorear por interacciones.
-        """
+        
         if feature_name not in self.feature_names:
             raise ValueError(f"Feature no encontrada: {feature_name}")
 
@@ -172,15 +136,10 @@ class ShapAnalyzer:
         plt.close()
         return ruta
 
-    # -----------------------------------------------------
-    # 6. Explicacion individual (waterfall)
-    # -----------------------------------------------------
+
     def plot_waterfall_individual(self, X, idx_registro: int, clase_idx: int = 1,
                                   max_display: int = 12) -> Path:
-        """
-        Genera un waterfall plot para un registro individual.
-        """
-        # Obtener base value de forma robusta
+       
         if isinstance(self.explainer.expected_value, (list, np.ndarray)):
             base_value = self.explainer.expected_value[clase_idx]
         else:
@@ -206,15 +165,10 @@ class ShapAnalyzer:
         plt.close()
         return ruta
 
-    # -----------------------------------------------------
-    # 7. Top factores por registro (tabla)
-    # -----------------------------------------------------
+   
     def top_factores_individual(self, X, idx_registro: int, clase_idx: int = 1,
                                  n: int = 5) -> dict:
-        """
-        Devuelve los top N factores que empujan hacia la clase dada
-        para un registro especifico.
-        """
+    
         valores = self.shap_values[clase_idx][idx_registro]
         datos = X[idx_registro]
 
@@ -239,11 +193,8 @@ class ShapAnalyzer:
             "empuja_contra": empuja_contra,
         }
 
-    # -----------------------------------------------------
-    # 8. Reporte completo en consola
-    # -----------------------------------------------------
+
     def reporte_consola(self, X, clase_idx: int = 1, top_n: int = 15):
-        """Imprime un reporte completo en consola."""
         print("\n" + "=" * 78)
         print(f"REPORTE SHAP - CLASE: {self.class_names[clase_idx]}")
         print("=" * 78)
@@ -256,7 +207,6 @@ class ShapAnalyzer:
         for i, row in df_imp.iterrows():
             print(f"  {i+1:<6}{row['Feature']:<38}{row['Importancia_SHAP']:>15.5f}")
 
-        # Explicar registro 0 como ejemplo
         print(f"\n  Ejemplo de explicacion individual (registro #0):")
         print("  " + "-" * 70)
         factores = self.top_factores_individual(X, 0, clase_idx, n=5)
@@ -276,18 +226,8 @@ class ShapAnalyzer:
             print("    (ninguno)")
 
 
-# ============================================================
-# FUNCION DE ALTO NIVEL PARA USAR EN main.py
-# ============================================================
+
 def ejecutar_shap(modelo, X_train, X_test, feature_names, verbose: bool = True):
-    """
-    Ejecuta el analisis SHAP completo:
-      1. Calcula SHAP values sobre test
-      2. Importancia global de las 3 clases
-      3. Graficos summary, bar, waterfall y dependence
-      4. Reporte en consola
-    Retorna (analyzer, idx_max_riesgo, proba_voluntaria).
-    """
     print("\n" + "=" * 78)
     print("PASO 6: EXPLICABILIDAD CON SHAP")
     print("=" * 78)
@@ -295,21 +235,17 @@ def ejecutar_shap(modelo, X_train, X_test, feature_names, verbose: bool = True):
     analyzer = ShapAnalyzer(modelo, feature_names)
     analyzer.calcular(X_test, verbose=verbose)
 
-    # 1. Reporte en consola (clase 1 = Renuncia voluntaria)
     analyzer.reporte_consola(X_test, clase_idx=1, top_n=15)
 
-    # 2. Graficos para las 3 clases (summary + bar)
     print("\n  Generando graficos SHAP...")
     print("  " + "-" * 70)
 
     for clase_idx in range(3):
         r1 = analyzer.plot_summary(X_test, clase_idx=clase_idx, max_display=15)
         print(f"    {r1.name}")
-        # CORREGIDO: plot_importancia_bar NO recibe X
         r2 = analyzer.plot_importancia_bar(clase_idx=clase_idx, top_n=15)
         print(f"    {r2.name}")
 
-    # 3. Dependence plots para las 5 features mas importantes (clase 1)
     top5 = analyzer.importancia_global(clase_idx=1).head(5)["Feature"].tolist()
     for feature in top5:
         try:
@@ -319,7 +255,6 @@ def ejecutar_shap(modelo, X_train, X_test, feature_names, verbose: bool = True):
         except Exception as e:
             print(f"    [SKIP] {feature}: {e}")
 
-    # 4. Waterfall para el registro de mayor riesgo de renuncia voluntaria
     proba_voluntaria = modelo.predict_proba(X_test)[:, 1]
     idx_max = int(np.argmax(proba_voluntaria))
     r_wf = analyzer.plot_waterfall_individual(X_test, idx_max, clase_idx=1)

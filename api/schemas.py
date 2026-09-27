@@ -48,21 +48,40 @@ class BatchOutput(BaseModel):
     predicciones: list[PrediccionOutput]
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55c495b (Cleaning stage)
 class ModelInfo(BaseModel):
     nombre: str
     version: str
     tipo: str
     metricas: dict
     features: int
+<<<<<<< HEAD
     clases: list[str]
     fecha_entrenamiento: str | None = None
+=======
+    clases: List[str]
+    fecha_entrenamiento: Optional[str] = None
+
+
+class FeatureImportance(BaseModel):
+    """Importancia de una feature segun SHAP."""
+    rank: int
+    feature: str
+    importancia: float
+>>>>>>> 55c495b (Cleaning stage)
 
 
 class FeatureImportanceOutput(BaseModel):
     clase: str
     top_features: list[dict]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 55c495b (Cleaning stage)
 class HealthCheck(BaseModel):
     status: str
     modelo_cargado: bool

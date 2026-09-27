@@ -14,14 +14,9 @@ from sklearn.metrics import (
 from config import FIGURES_DIR, REPORTS_DIR, TARGET_MAP
 
 
-# ============================================================
-# METRICAS DE FAIRNESS (implementacion directa, sin fairlearn)
-# ============================================================
+
 def demographic_parity_difference(y_pred, sensitive) -> float:
-    """
-    Diferencia entre la tasa de prediccion positiva del grupo
-    mas favorecido y el menos favorecido.
-    """
+    
     grupos = pd.unique(sensitive)
     tasas = {}
     for g in grupos:
@@ -35,11 +30,7 @@ def demographic_parity_difference(y_pred, sensitive) -> float:
 
 
 def disparate_impact_ratio(y_pred, sensitive) -> float:
-    """
-    Ratio entre la tasa de prediccion positiva del grupo menos favorecido
-    y la del grupo mas favorecido. Valor ideal: cercano a 1.
-    Regla 4/5 de EEOC: debe estar entre 0.8 y 1.25.
-    """
+   
     grupos = pd.unique(sensitive)
     tasas = {}
     for g in grupos:
@@ -57,10 +48,7 @@ def disparate_impact_ratio(y_pred, sensitive) -> float:
 
 
 def equalized_odds_difference(y_true, y_pred, sensitive) -> dict:
-    """
-    Diferencia en TPR y FPR entre grupos.
-    Retorna TPR_diff y FPR_diff por subgrupo.
-    """
+   
     grupos = pd.unique(sensitive)
     tprs = {}
     fprs = {}
@@ -89,46 +77,28 @@ def equalized_odds_difference(y_true, y_pred, sensitive) -> dict:
     }
 
 
-# ============================================================
-# CLASE PRINCIPAL
-# ============================================================
 class BiasAnalyzer:
-    """
-    Analiza fairness del modelo sobre variables sensibles.
-    Binzariza el target (Permanencia=0 vs Cualquier renuncia=1) para el analisis.
-    """
+    
 
     def __init__(self, modelo, preprocessor):
         self.modelo = modelo
         self.preprocessor = preprocessor
         self.resultados_ = {}
 
-    # -----------------------------------------------------
-    # Preparar datos binarios
-    # -----------------------------------------------------
+    
     def _preparar_binario(self, df_empleados: pd.DataFrame):
-        """
-        Extrae:
-          - y_true binario (1 = cualquier renuncia, 0 = permanencia)
-          - y_pred binario (1 = predicho como renuncia voluntaria o involuntaria)
-          - y_proba (probabilidad de renuncia voluntaria)
-          - Dataframe con variables sensibles
-        """
+        
         if "Rotacion_Personal" not in df_empleados.columns:
             raise ValueError("La columna objetivo no esta en el DataFrame.")
 
-        # y_true binario
         y_true_bin = (df_empleados["Rotacion_Personal"] != "Permanencia").astype(int).values
 
-        # Predecir
         X_proc = self.preprocessor.transform(df_empleados)
         probas = self.modelo.predict_proba(X_proc)
 
-        # Prediccion binaria: es renuncia si la clase dominante no es Permanencia
         y_pred_multiclase = np.argmax(probas, axis=1)
         y_pred_bin = (y_pred_multiclase != 0).astype(int)
 
-        # Dataframe de sensibles
         sensibles = pd.DataFrame(index=df_empleados.index)
 
         if "Genero" in df_empleados.columns:
@@ -145,20 +115,15 @@ class BiasAnalyzer:
 
         return y_true_bin, y_pred_bin, probas, sensibles
 
-    # -----------------------------------------------------
-    # Analisis de una variable sensible
-    # -----------------------------------------------------
+    
     def analizar_sensible(self, y_true, y_pred, sensitive_series, nombre_sensible):
-        """Analiza fairness para una variable sensible."""
         sensitive = sensitive_series.values
         grupos = pd.unique(sensitive)
 
-        # Metricas de fairness globales
         dp = demographic_parity_difference(y_pred, sensitive)
         di = disparate_impact_ratio(y_pred, sensitive)
         eo = equalized_odds_difference(y_true, y_pred, sensitive)
 
-        # Metricas por grupo
         metricas_grupo = {}
         for g in grupos:
             mask = sensitive == g
@@ -200,11 +165,8 @@ class BiasAnalyzer:
             "cumple_eo_umbral": bool(eo["tpr_difference"] < 0.10 and eo["fpr_difference"] < 0.10),
         }
 
-    # -----------------------------------------------------
-    # Analizar todas las variables sensibles
-    # -----------------------------------------------------
+   
     def analizar_todas(self, df_empleados: pd.DataFrame, verbose: bool = True) -> dict:
-        """Ejecuta el analisis de fairness sobre todas las variables sensibles."""
         if verbose:
             print("\n  Preparando datos para analisis de sesgos...")
 
@@ -223,9 +185,7 @@ class BiasAnalyzer:
 
         return self.resultados_
 
-    # -----------------------------------------------------
-    # Impresion en consola
-    # -----------------------------------------------------
+   
     def _imprimir_consola(self):
         print("\n" + "=" * 78)
         print("PASO 8: ANALISIS DE SESGOS Y FAIRNESS")
@@ -254,11 +214,8 @@ class BiasAnalyzer:
                       f"{m['f1']:>10.4f}"
                       f"{m['fpr']:>10.4f}")
 
-    # -----------------------------------------------------
-    # Graficos
-    # -----------------------------------------------------
+    
     def plot_fairness_bars(self, nombre_sensible: str) -> Path:
-        """Grafico comparativo de metricas por grupo para una variable sensible."""
         if nombre_sensible not in self.resultados_:
             raise ValueError(f"No hay analisis para: {nombre_sensible}")
 
@@ -292,11 +249,8 @@ class BiasAnalyzer:
         plt.close()
         return ruta
 
-    # -----------------------------------------------------
-    # Guardar reporte
-    # -----------------------------------------------------
+    
     def guardar_reporte(self, ruta: Path = None) -> Path:
-        """Guarda el analisis de sesgos en un archivo .txt."""
         if ruta is None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             ruta = REPORTS_DIR / f"fairness_{timestamp}.txt"
@@ -352,18 +306,10 @@ class BiasAnalyzer:
         return ruta
 
 
-# ============================================================
-# FUNCION DE ALTO NIVEL
-# ============================================================
+
 def ejecutar_analisis_sesgos(modelo, preprocessor, df_empleados: pd.DataFrame,
                               verbose: bool = True):
-    """
-    Ejecuta el PASO 8 completo:
-      1. Analiza fairness por Genero, Grupo_Edad y Firma
-      2. Genera graficos comparativos
-      3. Guarda reporte .txt
-    Retorna el BiasAnalyzer.
-    """
+
     print("\n" + "=" * 78)
     print("PASO 8: ETICA Y ANALISIS DE SESGOS")
     print("=" * 78)

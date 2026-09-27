@@ -9,9 +9,7 @@ from modeling.optimizer import optimizar_modelo, evaluar_en_test
 
 
 class ModelTrainer:
-    """
-    Orquesta la optimizacion, entrenamiento y evaluacion del modelo final.
-    """
+
 
     def __init__(self, nombre_modelo: str = "XGBoost", n_trials: int = 30):
         self.nombre_modelo = nombre_modelo
@@ -27,12 +25,10 @@ class ModelTrainer:
         X_val=None, y_val=None,
         verbose: bool = True,
     ):
-        """Optimiza, entrena y guarda el modelo final."""
         print("\n" + "=" * 78)
         print(f"PASO 5: OPTIMIZACION DE HIPERPARAMETROS - {self.nombre_modelo}")
         print("=" * 78)
 
-        # Optimizacion + entrenamiento
         self.modelo_, self.params_, self.score_cv_ = optimizar_modelo(
             self.nombre_modelo, X_train, y_train,
             n_trials=self.n_trials, verbose=verbose,
@@ -40,14 +36,12 @@ class ModelTrainer:
         return self
 
     def evaluar(self, X_test, y_test):
-        """Evaluacion final en test."""
         self.metricas_test_, y_pred, y_proba = evaluar_en_test(
             self.modelo_, X_test, y_test, f"{self.nombre_modelo} optimizado"
         )
         return self.metricas_test_
 
     def guardar(self):
-        """Guarda modelo + metadatos en artifacts/models/."""
         if self.modelo_ is None:
             raise ValueError("No hay modelo entrenado. Llama a entrenar() primero.")
 
@@ -57,12 +51,10 @@ class ModelTrainer:
         joblib.dump(self.modelo_, ruta_modelo)
         print(f"\n  Modelo guardado en: {ruta_modelo}")
 
-        # Guardar tambien como "modelo_final.pkl" para uso posterior
         ruta_final = MODELS_DIR / "modelo_final.pkl"
         joblib.dump(self.modelo_, ruta_final)
         print(f"  Copia como modelo final: {ruta_final}")
 
-        # Guardar metadatos
         metadatos = {
             "nombre_modelo": self.nombre_modelo,
             "timestamp": timestamp,

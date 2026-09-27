@@ -38,9 +38,7 @@ RECOMENDACION_GENERICA = "Analizar en reunion 1:1 con el empleado"
 
 
 class AlertSystem:
-    """
-    Genera alertas de rotacion para todos los empleados.
-    """
+
 
     def __init__(
         self,
@@ -50,14 +48,7 @@ class AlertSystem:
         alert_threshold: float = ALERT_THRESHOLD,
         medium_threshold: float = MEDIUM_THRESHOLD,
     ):
-        """
-        Args:
-            modelo: modelo entrenado
-            preprocessor: DataPreprocessor ajustado (con feature_engineer + ColumnTransformer)
-            shap_analyzer: instancia de ShapAnalyzer (ya con modelo cargado)
-            alert_threshold: umbral para riesgo ALTO
-            medium_threshold: umbral para riesgo MODERADO
-        """
+        
         self.modelo = modelo
         self.preprocessor = preprocessor
         self.shap_analyzer = shap_analyzer
@@ -66,27 +57,18 @@ class AlertSystem:
         self.resultados_ = None
         self.reporte_ = None
 
-    # -----------------------------------------------------
-    # 1. Predecir riesgo para todos los empleados
-    # -----------------------------------------------------
     def predecir_riesgo(self, df_empleados: pd.DataFrame, verbose: bool = True) -> pd.DataFrame:
-        """
-        Calcula probabilidad de renuncia voluntaria para todos los empleados.
-        Retorna un DataFrame con: id, probabilidades, nivel de riesgo.
-        """
+     
         if verbose:
             print(f"\n  Calculando riesgo para {len(df_empleados)} empleados...")
 
-        # Guardar identificadores (fuera del preprocesamiento)
         ids = df_empleados["ID_Empleado"].values
 
-        # Preprocesar todas las filas
         X_proc = self.preprocessor.transform(df_empleados)
 
-        # Predicciones
+        
         probas = self.modelo.predict_proba(X_proc)
 
-        # Guardamos probabilidades por clase
         df_out = pd.DataFrame({
             "ID_Empleado": ids,
             "Prob_Permanencia": probas[:, 0],
@@ -94,7 +76,6 @@ class AlertSystem:
             "Prob_Renuncia_Involuntaria": probas[:, 2],
         })
 
-        # Nivel de riesgo (foco en renuncia voluntaria)
         p = df_out["Prob_Renuncia_Voluntaria"]
         df_out["Nivel_Riesgo"] = np.select(
             [p >= self.alert_threshold,
@@ -103,7 +84,6 @@ class AlertSystem:
             default="Bajo",
         )
 
-        # Agregar columnas utiles del original para el reporte
         cols_contexto = [
             "ID_Empleado", "Firma_Auditora", "Cargo", "Area_Funcional",
             "Nivel_Jerarquico", "Antiguedad_Meses", "Salario_Mensual_HNL",
@@ -113,7 +93,6 @@ class AlertSystem:
         cols_disponibles = [c for c in cols_contexto if c in df_empleados.columns]
         df_out = df_out.merge(df_empleados[cols_disponibles], on="ID_Empleado", how="left")
 
-        # X procesado se guarda como atributo para SHAP individual
         self.X_procesado_ = X_proc
         self.df_original_ = df_empleados.reset_index(drop=True)
         self.resultados_ = df_out
@@ -126,14 +105,9 @@ class AlertSystem:
 
         return df_out
 
-    # -----------------------------------------------------
-    # 2. Factores y recomendaciones para un empleado
-    # -----------------------------------------------------
+  
     def explicar_empleado(self, idx_fila: int, n: int = 5) -> dict:
-        """
-        Devuelve los factores que empujan hacia renuncia voluntaria
-        y las recomendaciones asociadas para una fila del DataFrame original.
-        """
+       
         factores = self.shap_analyzer.top_factores_individual(
             self.X_procesado_, idx_fila, clase_idx=1, n=n
         )
@@ -153,15 +127,8 @@ class AlertSystem:
             "recomendaciones": recomendaciones,
         }
 
-    # -----------------------------------------------------
-    # 3. Generar reporte completo
-    # -----------------------------------------------------
     def generar_reporte(self, top_n: int = 20, verbose: bool = True) -> dict:
-        """
-        Construye un reporte con:
-          - Resumen ejecutivo
-          - Top N empleados en riesgo ALTO con factores y recomendaciones
-        """
+     
         if self.resultados_ is None:
             raise ValueError("Primero llama a predecir_riesgo().")
 
@@ -223,9 +190,6 @@ class AlertSystem:
 
         return self.reporte_
 
-    # -----------------------------------------------------
-    # 4. Impresion en consola
-    # -----------------------------------------------------
     def _imprimir_reporte_consola(self):
         if self.reporte_ is None:
             return
@@ -290,9 +254,6 @@ class AlertSystem:
 
             print("  " + "-" * 74)
 
-    # -----------------------------------------------------
-    # 5. Guardar reporte en archivo .txt
-    # -----------------------------------------------------
     def guardar_reporte(self, ruta: Path = None) -> Path:
         """
         Guarda el reporte completo en un .txt legible.
@@ -380,9 +341,7 @@ class AlertSystem:
         print(f"\n  Reporte guardado en: {ruta}")
         return ruta
 
-    # -----------------------------------------------------
-    # 6. Exportar a CSV (opcional, para RRHH)
-    # -----------------------------------------------------
+  
     def exportar_csv(self, ruta: Path = None) -> Path:
         """
         Exporta la tabla de riesgos a CSV para uso en Excel/Power BI.
@@ -399,9 +358,6 @@ class AlertSystem:
         return ruta
 
 
-# ============================================================
-# FUNCION DE ALTO NIVEL PARA USAR EN main.py
-# ============================================================
 def ejecutar_alertas(
     modelo,
     preprocessor,
@@ -410,14 +366,7 @@ def ejecutar_alertas(
     top_n: int = 20,
     verbose: bool = True,
 ):
-    """
-    Ejecuta el PASO 7 completo:
-      1. Predice riesgo para todos
-      2. Genera reporte con top N de alto riesgo
-      3. Imprime en consola
-      4. Guarda .txt y .csv en artifacts/reports/
-    Retorna el AlertSystem configurado.
-    """
+  
     sistema = AlertSystem(modelo, preprocessor, shap_analyzer)
 
     sistema.predecir_riesgo(df_empleados, verbose=verbose)

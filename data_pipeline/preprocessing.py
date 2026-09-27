@@ -1,9 +1,4 @@
-"""
-Preprocesamiento y Feature Engineering.
-Ubicacion: data_pipeline/preprocessing.py
 
-Compatible con Windows / Linux / macOS
-"""
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -22,14 +17,8 @@ from config import (
 )
 
 
-# ============================================================
-# 1. FEATURE ENGINEER
-# ============================================================
 class FeatureEngineer(BaseEstimator, TransformerMixin):
-    """
-    Crea features derivadas especificas para firmas auditoras.
-    Recibe un DataFrame con las columnas originales y agrega nuevas.
-    """
+
 
     def __init__(self):
         self.feature_names_ = []
@@ -43,78 +32,51 @@ class FeatureEngineer(BaseEstimator, TransformerMixin):
 
         df = X.copy()
 
-        # -----------------------------------------------------
-        # 1. Ratio salario / antiguedad
-        #    Mide si el salario crece con la antiguedad
-        # -----------------------------------------------------
+    
         df["Ratio_Salario_Antiguedad"] = (
             df["Salario_Mensual_HNL"] / (df["Antiguedad_Meses"] + 1)
         )
 
-        # -----------------------------------------------------
-        # 2. Score de burnout
-        #    Combina horas extra, carga laboral y ausencias
-        # -----------------------------------------------------
+       
         df["Score_Burnout"] = (
             (df["Horas_Extra_Mes"] / 40.0) * 0.5
             + (df["Carga_Trabajo_1a5"] / 5.0) * 0.3
             + (df["Ausencias_Anio"] / 20.0) * 0.2
         ) * 10
 
-        # -----------------------------------------------------
-        # 3. Ratio capacitacion / antiguedad
-        # -----------------------------------------------------
+        
         df["Ratio_Capacitacion_Antiguedad"] = (
             df["Horas_Capacitacion_Anio"] / (df["Antiguedad_Meses"] + 1)
         )
-
-        # -----------------------------------------------------
-        # 4. Ratio promociones por anio
-        # -----------------------------------------------------
         df["Ratio_Promocion_Anios"] = (
             df["Promociones"] / ((df["Antiguedad_Meses"] / 12) + 1)
         )
 
-        # -----------------------------------------------------
-        # 5. Score de estabilidad
-        #    Mayor antiguedad + menor ausencia + mas promociones
-        # -----------------------------------------------------
+      
         df["Score_Estabilidad"] = (
             (df["Antiguedad_Meses"] / 84.0) * 0.5
             + (1 - (df["Ausencias_Anio"] / 20.0)) * 0.3
             + (df["Promociones"] / 4.0) * 0.2
         )
 
-        # -----------------------------------------------------
-        # 6. Score de insatisfaccion
-        #    Vacaciones pendientes + ausencias + carga alta
-        # -----------------------------------------------------
         df["Score_Insatisfaccion"] = (
             (df["Dias_Vacaciones_Pendientes"] / 30.0) * 0.5
             + (df["Ausencias_Anio"] / 20.0) * 0.3
             + (df["Carga_Trabajo_1a5"] / 5.0) * 0.2
         )
 
-        # -----------------------------------------------------
-        # 7. Carga neta
-        #    Horas extra + carga - capacitacion
-        # -----------------------------------------------------
+       
         df["Carga_Neta"] = (
             df["Horas_Extra_Mes"] * (df["Carga_Trabajo_1a5"] / 5.0)
             - (df["Horas_Capacitacion_Anio"] / 12.0)
         )
 
-        # -----------------------------------------------------
-        # 8. Ratio ausencias por antiguedad
-        # -----------------------------------------------------
+       
         df["Ratio_Ausencias_Antiguedad"] = (
             df["Ausencias_Anio"] / ((df["Antiguedad_Meses"] / 12) + 1)
         )
 
-        # -----------------------------------------------------
-        # 9. Score de desarrollo
-        #    Programa + capacitacion + promociones
-        # -----------------------------------------------------
+    
         programa_num = (df["Programa_Desarrollo"] == "Si").astype(int)
         df["Score_Desarrollo"] = (
             programa_num * 0.4
@@ -122,10 +84,6 @@ class FeatureEngineer(BaseEstimator, TransformerMixin):
             + (df["Promociones"] / 4.0) * 0.2
         )
 
-        # -----------------------------------------------------
-        # 10. Ratio distancia / tiempo de desplazamiento
-        #     Indica si vive lejos o viaja mucho tiempo
-        # -----------------------------------------------------
         df["Ratio_Distancia_Tiempo"] = (
             df["Distancia_Domicilio_Trabajo_km"] / (df["Tiempo_Desplazamiento_Min"] + 1)
         )
@@ -137,14 +95,8 @@ class FeatureEngineer(BaseEstimator, TransformerMixin):
         return self.feature_names_
 
 
-# ============================================================
-# 2. DATA PREPROCESSOR
-# ============================================================
 class DataPreprocessor:
-    """
-    Pipeline completo: Feature Engineering + Imputacion + Encoding + Escalado.
-    """
-
+   
     def __init__(self):
         self.numeric_features = NUM_FEATURES.copy()
         self.categorical_features = CAT_FEATURES.copy()
@@ -166,9 +118,7 @@ class DataPreprocessor:
         self.final_features_ = None
         self.label_encoders_ = {}
 
-    # -----------------------------------------------------
-    # Construir el ColumnTransformer
-    # -----------------------------------------------------
+   
     def _build_preprocessor(self):
         numeric_pipeline = Pipeline([
             ("imputer", SimpleImputer(strategy="median")),
@@ -190,9 +140,7 @@ class DataPreprocessor:
         )
         return preprocessor
 
-    # -----------------------------------------------------
-    # Codificar categoricas con LabelEncoder (uno por columna)
-    # -----------------------------------------------------
+    
     def _encode_categoricals(self, df: pd.DataFrame, fit: bool = True) -> pd.DataFrame:
         df_out = df.copy()
         for col in self.categorical_features:
@@ -213,9 +161,7 @@ class DataPreprocessor:
                 df_out[col] = le.transform(valores)
         return df_out
 
-    # -----------------------------------------------------
-    # Fit + Transform
-    # -----------------------------------------------------
+   
     def fit_transform(self, df: pd.DataFrame) -> np.ndarray:
         print("  [Preprocessor] Aplicando Feature Engineering...")
         df_eng = self.feature_engineer.fit_transform(df)
@@ -233,9 +179,7 @@ class DataPreprocessor:
         print(f"  [Preprocessor] Listo. Dimensiones: {X_out.shape}")
         return X_out
 
-    # -----------------------------------------------------
-    # Transform (para datos nuevos)
-    # -----------------------------------------------------
+   
     def transform(self, df: pd.DataFrame) -> np.ndarray:
         if self.preprocessor is None:
             raise ValueError("El preprocesador no esta ajustado. Llama a fit_transform primero.")
@@ -244,17 +188,13 @@ class DataPreprocessor:
         df_enc = self._encode_categoricals(df_eng, fit=False)
         return self.preprocessor.transform(df_enc)
 
-    # -----------------------------------------------------
-    # Nombres finales de features
-    # -----------------------------------------------------
+   
     def get_feature_names(self):
         if self.final_features_ is None:
             raise ValueError("Primero llama a fit_transform.")
         return self.final_features_
 
-    # -----------------------------------------------------
-    # Guardar / Cargar
-    # -----------------------------------------------------
+    
     def save(self, ruta: Path = PREPROCESSOR_FILE):
         joblib.dump(self, ruta)
         print(f"  [Preprocessor] Guardado en: {ruta}")
@@ -264,19 +204,9 @@ class DataPreprocessor:
         return joblib.load(ruta)
 
 
-# ============================================================
-# 3. DIVISION DE DATOS
-# ============================================================
+
 def preparar_datos(df: pd.DataFrame, verbose: bool = True):
-    """
-    Prepara los datos:
-      1. Elimina columnas con data leakage
-      2. Aplica preprocesamiento
-      3. Divide en train / validation / test
-    Retorna:
-      X_train, X_val, X_test, y_train, y_val, y_test, preprocessor
-    """
-    # 1. Eliminar columnas con data leakage y mapear target
+    
     df_clean = df.drop(columns=[c for c in COLS_EXCLUIR if c in df.columns]).copy()
 
     if TARGET not in df_clean.columns:
@@ -285,7 +215,6 @@ def preparar_datos(df: pd.DataFrame, verbose: bool = True):
     y = df_clean[TARGET].map(TARGET_MAP).values
     X = df_clean.drop(columns=[TARGET])
 
-    # 2. Division train+val / test
     X_temp, X_test, y_temp, y_test = train_test_split(
         X, y,
         test_size=TEST_SIZE,
@@ -293,7 +222,6 @@ def preparar_datos(df: pd.DataFrame, verbose: bool = True):
         stratify=y,
     )
 
-    # 3. Division train / val
     val_ratio = VAL_SIZE / (1 - TEST_SIZE)
     X_train, X_val, y_train, y_val = train_test_split(
         X_temp, y_temp,
@@ -308,7 +236,6 @@ def preparar_datos(df: pd.DataFrame, verbose: bool = True):
         print(f"    Validation: {X_val.shape[0]:>4} registros")
         print(f"    Test:       {X_test.shape[0]:>4} registros")
 
-    # 4. Preprocesamiento
     preprocessor = DataPreprocessor()
     X_train_p = preprocessor.fit_transform(X_train)
     X_val_p = preprocessor.transform(X_val)

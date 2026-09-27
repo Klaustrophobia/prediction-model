@@ -1,9 +1,4 @@
-"""
-Análisis Exploratorio de Datos (EDA).
-Ubicación: data_pipeline/eda.py
 
-Compatible con Windows / Linux / macOS
-"""
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,23 +10,18 @@ from config import (
     COLS_EXCLUIR, TARGET_MAP,
 )
 
-# Configuración global de estilo
 sns.set_style("whitegrid")
 plt.rcParams["figure.dpi"] = 100
 plt.rcParams["savefig.dpi"] = 150
 plt.rcParams["font.size"] = 9
 
 
-# ============================================================
-# 1. RESUMEN ESTADÍSTICO
-# ============================================================
+
 def resumen_estadistico(df: pd.DataFrame) -> pd.DataFrame:
-    """Estadísticas descriptivas de variables numéricas."""
     return df[NUM_FEATURES].describe().T.round(2)
 
 
 def analisis_target(df: pd.DataFrame) -> pd.DataFrame:
-    """Distribución de la variable objetivo."""
     conteo = df[TARGET].value_counts()
     pct = df[TARGET].value_counts(normalize=True) * 100
     tabla = pd.DataFrame({"Conteo": conteo, "Porcentaje": pct.round(2)})
@@ -39,20 +29,15 @@ def analisis_target(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def tasas_por_categoria(df: pd.DataFrame, col: str) -> pd.DataFrame:
-    """Tasa de rotación (en %) por categoría de una variable."""
     tabla = pd.crosstab(df[col], df[TARGET], normalize="index") * 100
     tabla["n"] = df[col].value_counts()
     return tabla.round(2)
 
 
-# ============================================================
-# 2. GRÁFICOS
-# ============================================================
+
 def guardar_grafico_target(df: pd.DataFrame) -> Path:
-    """Distribución de la variable objetivo (barras + pastel)."""
     fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 
-    # Colores consistentes
     colores = {"Permanencia": "#2ecc71",
                "Renuncia voluntaria": "#e74c3c",
                "Renuncia involuntaria": "#f39c12"}
@@ -82,7 +67,6 @@ def guardar_grafico_target(df: pd.DataFrame) -> Path:
 
 
 def guardar_grafico_numericas(df: pd.DataFrame) -> Path:
-    """Histogramas de variables numéricas segmentados por target."""
     n = len(NUM_FEATURES)
     cols = 4
     filas = (n + cols - 1) // cols
@@ -114,7 +98,6 @@ def guardar_grafico_numericas(df: pd.DataFrame) -> Path:
 
 
 def guardar_grafico_categoricas(df: pd.DataFrame) -> Path:
-    """Barras apiladas de variables categóricas vs target."""
     n = len(CAT_FEATURES)
     cols = 2
     filas = (n + cols - 1) // cols
@@ -148,7 +131,6 @@ def guardar_grafico_categoricas(df: pd.DataFrame) -> Path:
 
 
 def guardar_matriz_correlacion(df: pd.DataFrame) -> Path:
-    """Matriz de correlación de variables numéricas."""
     plt.figure(figsize=(11, 9))
     corr = df[NUM_FEATURES].corr()
     mask = np.triu(np.ones_like(corr, dtype=bool), k=1)
@@ -165,8 +147,7 @@ def guardar_matriz_correlacion(df: pd.DataFrame) -> Path:
 
 
 def guardar_boxplots_por_target(df: pd.DataFrame) -> Path:
-    """Boxplots de variables numéricas clave por target."""
-    # Seleccionamos las más relevantes para el negocio
+  
     vars_clave = [
         "Salario_Mensual_HNL", "Antiguedad_Meses", "Evaluacion_Desempeno_1a5",
         "Horas_Extra_Mes", "Promociones", "Ausencias_Anio",
@@ -190,51 +171,41 @@ def guardar_boxplots_por_target(df: pd.DataFrame) -> Path:
     return ruta
 
 
-# ============================================================
-# 3. EJECUTOR PRINCIPAL DEL EDA
-# ============================================================
+
 def ejecutar_eda(df: pd.DataFrame) -> None:
-    """Ejecuta el EDA completo y muestra resultados en consola."""
+    
     print("\n" + "=" * 70)
     print(" ANÁLISIS EXPLORATORIO DE DATOS (EDA)")
     print("=" * 70)
 
-    # 1. Resumen estadístico
     print("\n ESTADÍSTICAS DESCRIPTIVAS (Variables Numéricas):")
     print("-" * 70)
     print(resumen_estadistico(df).to_string())
 
-    # 2. Distribución del target
     print("\n DISTRIBUCIÓN DEL TARGET:")
     print("-" * 70)
     print(analisis_target(df).to_string())
 
-    # 3. Tasas de rotación por firma
     print("\n TASA DE ROTACIÓN POR FIRMA (%):")
     print("-" * 70)
     print(tasas_por_categoria(df, "Firma_Auditora").to_string())
 
-    # 4. Área funcional
     print("\n TASA DE ROTACIÓN POR ÁREA FUNCIONAL (%):")
     print("-" * 70)
     print(tasas_por_categoria(df, "Area_Funcional").to_string())
 
-    # 5. Nivel jerárquico
     print("\n TASA DE ROTACIÓN POR NIVEL JERÁRQUICO (%):")
     print("-" * 70)
     print(tasas_por_categoria(df, "Nivel_Jerarquico").to_string())
 
-    # 6. Historial disciplinario
     print("\n  TASA DE ROTACIÓN POR HISTORIAL DISCIPLINARIO (%):")
     print("-" * 70)
     print(tasas_por_categoria(df, "Historial_Disciplinario").to_string())
 
-    # 7. Programa de desarrollo
     print("\n TASA DE ROTACIÓN POR PROGRAMA DE DESARROLLO (%):")
     print("-" * 70)
     print(tasas_por_categoria(df, "Programa_Desarrollo").to_string())
 
-    # 8. Generación de gráficos
     print("\n Generando gráficos...")
     print("-" * 70)
 

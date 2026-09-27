@@ -11,18 +11,10 @@ from lightgbm import LGBMClassifier
 
 from config import RANDOM_STATE, CV_FOLDS, N_TRIALS_OPTUNA, TARGET_INV_MAP
 
-# Silenciar logs de Optuna
 optuna.logging.set_verbosity(optuna.logging.WARNING)
 
-
-# ============================================================
-# 1. OPTIMIZADOR XGBOOST
-# ============================================================
 def optimizar_xgboost(X_train, y_train, n_trials: int = N_TRIALS_OPTUNA, verbose: bool = True):
-    """
-    Optimiza hiperparametros de XGBoost con Optuna.
-    Metrica objetivo: ROC-AUC macro (validacion cruzada estratificada).
-    """
+ 
 
     def objective(trial):
         params = {
@@ -70,15 +62,8 @@ def optimizar_xgboost(X_train, y_train, n_trials: int = N_TRIALS_OPTUNA, verbose
 
     return study.best_params, study.best_value
 
-
-# ============================================================
-# 2. OPTIMIZADOR LIGHTGBM
-# ============================================================
 def optimizar_lightgbm(X_train, y_train, n_trials: int = N_TRIALS_OPTUNA, verbose: bool = True):
-    """
-    Optimiza hiperparametros de LightGBM con Optuna.
-    """
-
+ 
     def objective(trial):
         params = {
             "n_estimators": trial.suggest_int("n_estimators", 100, 500, step=50),
@@ -124,14 +109,9 @@ def optimizar_lightgbm(X_train, y_train, n_trials: int = N_TRIALS_OPTUNA, verbos
     return study.best_params, study.best_value
 
 
-# ============================================================
-# 3. EVALUACION FINAL EN TEST
-# ============================================================
+
 def evaluar_en_test(modelo, X_test, y_test, nombre: str = "Modelo"):
-    """
-    Evaluacion final sobre el conjunto de test (holdout).
-    Muestra metricas, reporte de clasificacion y matriz de confusion.
-    """
+ 
     t0 = time.time()
     y_pred = modelo.predict(X_test)
     y_proba = modelo.predict_proba(X_test)
@@ -175,19 +155,14 @@ def evaluar_en_test(modelo, X_test, y_test, nombre: str = "Modelo"):
     return metricas, y_pred, y_proba
 
 
-# ============================================================
-# 4. WRAPPER PRINCIPAL
-# ============================================================
+
 def optimizar_modelo(
     nombre_modelo: str,
     X_train, y_train,
     n_trials: int = N_TRIALS_OPTUNA,
     verbose: bool = True,
 ):
-    """
-    Optimiza el modelo indicado y devuelve instancia ya entrenada.
-    Retorna (modelo_entrenado, mejores_params, mejor_score_cv).
-    """
+  
     if nombre_modelo == "XGBoost":
         params, score = optimizar_xgboost(X_train, y_train, n_trials, verbose)
         params.update({

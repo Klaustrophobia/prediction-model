@@ -15,6 +15,11 @@ from api.schemas import (
 from api.service import get_service
 from config import TARGET_INV_MAP, ALERT_THRESHOLD, MEDIUM_THRESHOLD
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 55c495b (Cleaning stage)
 app = FastAPI(
     title="API de Prediccion de Rotacion - Firmas Auditoras",
     description=(
@@ -37,6 +42,10 @@ app.add_middleware(
 )
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55c495b (Cleaning stage)
 @app.get("/", tags=["Root"])
 def root():
     return {
@@ -84,6 +93,10 @@ def model_info():
 
 @app.get("/features/importance", response_model=FeatureImportanceOutput, tags=["Modelo"])
 def features_importance(clase: str = "Renuncia voluntaria", top_n: int = 15):
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55c495b (Cleaning stage)
     try:
         service = get_service()
 
@@ -115,6 +128,10 @@ def predict(empleado: EmpleadoInput):
 
 @app.post("/predict/batch", response_model=BatchOutput, tags=["Prediccion"])
 def predict_batch(batch: BatchInput):
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 55c495b (Cleaning stage)
     try:
         service = get_service()
         empleados_dict = [e.model_dump() for e in batch.empleados]
@@ -124,6 +141,10 @@ def predict_batch(batch: BatchInput):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55c495b (Cleaning stage)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=True)

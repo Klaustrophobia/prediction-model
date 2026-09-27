@@ -1,7 +1,6 @@
 import sys
 from pathlib import Path
 
-# Asegurar imports desde raiz
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
@@ -21,10 +20,6 @@ from config import (
 from data_pipeline.data_loader import cargar_datos
 from alerts.alert_system import RECOMENDACIONES, RECOMENDACION_GENERICA
 
-
-# ============================================================
-# CONFIGURACION DE PAGINA
-# ============================================================
 st.set_page_config(
     page_title="Dashboard Rotacion - Firmas Auditoras",
     page_icon="",
@@ -32,10 +27,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-
-# ============================================================
-# CSS PERSONALIZADO
-# ============================================================
 st.markdown("""
 <style>
     .main-header {
@@ -109,9 +100,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# ============================================================
-# CARGA DE RECURSOS (con cache)
-# ============================================================
 @st.cache_resource
 def cargar_modelo_y_preprocessor():
     """Carga modelo + preprocesador una sola vez."""
@@ -148,11 +136,7 @@ def calcular_predicciones_todos(_modelo, _preprocessor, df):
     return df_out
 
 
-# ============================================================
-# FUNCIONES AUXILIARES
-# ============================================================
 def render_metric_card(label, value, tipo="default"):
-    """Renderiza una tarjeta de metrica con estilo."""
     clase_extra = ""
     if tipo == "alto":
         clase_extra = "metric-card-alto"
@@ -170,7 +154,7 @@ def render_metric_card(label, value, tipo="default"):
 
 
 def color_riesgo(nivel):
-    """Devuelve color HTML segun nivel de riesgo."""
+    
     if nivel == "Alto":
         return "risk-alto"
     elif nivel == "Moderado":
@@ -229,9 +213,6 @@ def predecir_individual(modelo, preprocessor, datos: dict):
     }
 
 
-# ============================================================
-# SIDEBAR
-# ============================================================
 def render_sidebar(df):
     st.sidebar.markdown("## Panel de Control")
     st.sidebar.markdown("---")
@@ -278,9 +259,6 @@ def aplicar_filtros(df, firma, area, nivel, riesgo):
     return df_f
 
 
-# ============================================================
-# SECCIONES DEL DASHBOARD
-# ============================================================
 def seccion_resumen(df, df_filtrado):
     """KPIs principales."""
     st.markdown("## Resumen Ejecutivo")
@@ -382,7 +360,6 @@ def seccion_distribucion(df_filtrado):
 
 
 def seccion_tabla_riesgo(df_filtrado, top_n=20):
-    """Tabla de empleados en riesgo alto."""
     st.markdown("## Top Empleados en Riesgo de Renuncia Voluntaria")
 
     df_alto = df_filtrado[df_filtrado["Nivel_Riesgo"] == "Alto"].sort_values(
@@ -393,7 +370,6 @@ def seccion_tabla_riesgo(df_filtrado, top_n=20):
         st.info("No hay empleados en riesgo alto con los filtros actuales.")
         return
 
-    # Preparar tabla
     tabla = df_alto[[
         "ID_Empleado", "Firma_Auditora", "Cargo", "Area_Funcional",
         "Nivel_Jerarquico", "Antiguedad_Meses", "Salario_Mensual_HNL",
@@ -604,7 +580,6 @@ def mostrar_prediccion(modelo, preprocessor, empleado):
         else:
             st.info("Sin factores de proteccion significativos.")
 
-    # Recomendaciones
     st.markdown("### Recomendaciones de RRHH")
     if resultado["recomendaciones"]:
         for i, rec in enumerate(resultado["recomendaciones"], 1):
@@ -616,7 +591,6 @@ def mostrar_prediccion(modelo, preprocessor, empleado):
 
 
 def seccion_importancia_features():
-    """Muestra la importancia global de features (precalculada)."""
     st.markdown("## Importancia Global de Features")
 
     ruta = REPORTS_DIR / "figures" / "07_shap_importancia_clase_1.png"
@@ -629,7 +603,6 @@ def seccion_importancia_features():
 
 
 def seccion_descargas():
-    """Seccion de descargas de reportes."""
     st.markdown("## Reportes Generados")
 
     reportes = list(REPORTS_DIR.glob("*.txt")) + list(REPORTS_DIR.glob("*.csv"))
@@ -654,15 +627,11 @@ def seccion_descargas():
                 )
 
 
-# ============================================================
-# MAIN
-# ============================================================
 def main():
     # Header
     st.markdown('<div class="main-header">Dashboard de Rotacion de Personal</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Modelo predictivo para firmas auditoras - KPMG, PwC, Deloitte</div>', unsafe_allow_html=True)
 
-    # Cargar recursos
     try:
         modelo, preprocessor = cargar_modelo_y_preprocessor()
         df_original = cargar_datos_cache()
@@ -672,13 +641,10 @@ def main():
         st.info("Asegurate de haber ejecutado `python main.py` al menos una vez.")
         st.stop()
 
-    # Sidebar
     firma, area, nivel, riesgo = render_sidebar(df)
 
-    # Aplicar filtros
     df_filtrado = aplicar_filtros(df, firma, area, nivel, riesgo)
 
-    # Tabs principales
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "Resumen",
         "Distribucion",
