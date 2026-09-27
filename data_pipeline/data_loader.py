@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 55c495b (Cleaning stage)
 import pandas as pd
 from pathlib import Path
 from config import DATA_FILE, SHEET_NAME, TARGET
@@ -9,10 +5,7 @@ from config import DATA_FILE, SHEET_NAME, TARGET
 
 def cargar_datos(ruta: Path = DATA_FILE, hoja: str = SHEET_NAME,
                  verbose: bool = True) -> pd.DataFrame:
-<<<<<<< HEAD
-=======
 
->>>>>>> 55c495b (Cleaning stage)
     if not ruta.exists():
         raise FileNotFoundError(
             f"\nNo se encontro el archivo: {ruta}\n"

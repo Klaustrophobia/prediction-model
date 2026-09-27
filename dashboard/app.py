@@ -1,3 +1,4 @@
+
 import sys
 from pathlib import Path
 
@@ -19,6 +20,7 @@ from config import (
 )
 from data_pipeline.data_loader import cargar_datos
 from alerts.alert_system import RECOMENDACIONES, RECOMENDACION_GENERICA
+
 
 st.set_page_config(
     page_title="Dashboard Rotacion - Firmas Auditoras",
@@ -102,7 +104,6 @@ st.markdown("""
 
 @st.cache_resource
 def cargar_modelo_y_preprocessor():
-    """Carga modelo + preprocesador una sola vez."""
     modelo = joblib.load(MODELS_DIR / "modelo_final.pkl")
     preprocessor = joblib.load(MODELS_DIR / "preprocessor.pkl")
     return modelo, preprocessor
@@ -110,13 +111,11 @@ def cargar_modelo_y_preprocessor():
 
 @st.cache_data
 def cargar_datos_cache():
-    """Carga el Excel una sola vez."""
     return cargar_datos(verbose=False)
 
 
 @st.cache_data
 def calcular_predicciones_todos(_modelo, _preprocessor, df):
-    """Calcula probabilidades para todos los empleados (cache)."""
     X_proc = _preprocessor.transform(df)
     probas = _modelo.predict_proba(X_proc)
 
@@ -154,7 +153,6 @@ def render_metric_card(label, value, tipo="default"):
 
 
 def color_riesgo(nivel):
-    
     if nivel == "Alto":
         return "risk-alto"
     elif nivel == "Moderado":
@@ -164,12 +162,10 @@ def color_riesgo(nivel):
 
 
 def predecir_individual(modelo, preprocessor, datos: dict):
-    """Predice un empleado y devuelve factores SHAP."""
     import shap
 
     df_input = pd.DataFrame([datos])
 
-    # Asegurar columnas
     from config import NUM_FEATURES, CAT_FEATURES
     for col in NUM_FEATURES + CAT_FEATURES:
         if col not in df_input.columns:
@@ -178,7 +174,6 @@ def predecir_individual(modelo, preprocessor, datos: dict):
     X_proc = preprocessor.transform(df_input)
     proba = modelo.predict_proba(X_proc)[0]
 
-    # SHAP
     explainer = shap.TreeExplainer(modelo)
     shap_values = explainer.shap_values(X_proc)
     if isinstance(shap_values, np.ndarray) and shap_values.ndim == 3:
@@ -217,19 +212,15 @@ def render_sidebar(df):
     st.sidebar.markdown("## Panel de Control")
     st.sidebar.markdown("---")
 
-    # Filtro por firma
     firmas = ["Todas"] + sorted(df["Firma_Auditora"].unique().tolist())
     firma_sel = st.sidebar.selectbox("Firma auditora", firmas, index=0)
 
-    # Filtro por area
     areas = ["Todas"] + sorted(df["Area_Funcional"].unique().tolist())
     area_sel = st.sidebar.selectbox("Area funcional", areas, index=0)
 
-    # Filtro por nivel jerarquico
     niveles = ["Todos"] + sorted(df["Nivel_Jerarquico"].unique().tolist())
     nivel_sel = st.sidebar.selectbox("Nivel jerarquico", niveles, index=0)
 
-    # Filtro por nivel de riesgo
     riesgos = ["Todos", "Alto", "Moderado", "Bajo"]
     riesgo_sel = st.sidebar.selectbox("Nivel de riesgo", riesgos, index=0)
 
@@ -246,7 +237,6 @@ def render_sidebar(df):
 
 
 def aplicar_filtros(df, firma, area, nivel, riesgo):
-    """Aplica filtros del sidebar."""
     df_f = df.copy()
     if firma != "Todas":
         df_f = df_f[df_f["Firma_Auditora"] == firma]
@@ -259,8 +249,8 @@ def aplicar_filtros(df, firma, area, nivel, riesgo):
     return df_f
 
 
+
 def seccion_resumen(df, df_filtrado):
-    """KPIs principales."""
     st.markdown("## Resumen Ejecutivo")
 
     total = len(df_filtrado)
@@ -289,13 +279,11 @@ def seccion_resumen(df, df_filtrado):
 
 
 def seccion_distribucion(df_filtrado):
-    """Graficos de distribucion."""
     st.markdown("## Distribucion del Riesgo")
 
     col1, col2 = st.columns(2)
 
     with col1:
-        # Distribucion por nivel de riesgo
         conteo = df_filtrado["Nivel_Riesgo"].value_counts().reindex(
             ["Alto", "Moderado", "Bajo"], fill_value=0
         ).reset_index()
@@ -312,7 +300,6 @@ def seccion_distribucion(df_filtrado):
         st.plotly_chart(fig, use_container_width=True)
 
     with col2:
-        # Riesgo alto por firma
         df_alto = df_filtrado[df_filtrado["Nivel_Riesgo"] == "Alto"]
         if len(df_alto) > 0:
             conteo = df_alto.groupby("Firma_Auditora").size().reset_index(name="Alto riesgo")
@@ -327,7 +314,6 @@ def seccion_distribucion(df_filtrado):
         else:
             st.info("No hay empleados en riesgo alto con los filtros actuales.")
 
-    # Riesgo por area funcional
     col1, col2 = st.columns(2)
 
     with col1:
@@ -397,7 +383,6 @@ def seccion_tabla_riesgo(df_filtrado, top_n=20):
         },
     )
 
-    # Boton de descarga
     csv = df_alto.to_csv(index=False, encoding="utf-8-sig")
     st.download_button(
         label="Descargar lista completa (CSV)",
@@ -410,7 +395,6 @@ def seccion_tabla_riesgo(df_filtrado, top_n=20):
 
 
 def seccion_prediccion_individual(modelo, preprocessor, df):
-    """Formulario para predecir un empleado en tiempo real."""
     st.markdown("## Prediccion Individual en Tiempo Real")
 
     with st.expander("Seleccionar empleado de la base o ingresar manualmente", expanded=False):
@@ -425,7 +409,6 @@ def seccion_prediccion_individual(modelo, preprocessor, df):
             id_sel = st.selectbox("Selecciona un empleado", ids)
             empleado = df[df["ID_Empleado"] == id_sel].iloc[0].to_dict()
 
-            # Mostrar sus datos
             st.write("**Datos del empleado seleccionado:**")
             cols = st.columns(4)
             with cols[0]:
@@ -438,7 +421,6 @@ def seccion_prediccion_individual(modelo, preprocessor, df):
                 st.metric("Cargo", str(empleado["Cargo"])[:20])
 
         else:
-            # Formulario manual
             with st.form("form_prediccion"):
                 col1, col2, col3 = st.columns(3)
 
@@ -503,14 +485,12 @@ def seccion_prediccion_individual(modelo, preprocessor, df):
 
 
 def mostrar_prediccion(modelo, preprocessor, empleado):
-    """Muestra el resultado de la prediccion + SHAP."""
     with st.spinner("Calculando prediccion..."):
         resultado = predecir_individual(modelo, preprocessor, empleado)
 
     proba = resultado["proba"]
     p_vol = proba[1]
 
-    # Nivel de riesgo
     if p_vol >= ALERT_THRESHOLD:
         nivel = "Alto"
     elif p_vol >= MEDIUM_THRESHOLD:
@@ -531,7 +511,6 @@ def mostrar_prediccion(modelo, preprocessor, empleado):
     with col4:
         st.metric("Nivel de riesgo", nivel)
 
-    # Gauge de probabilidad
     fig = go.Figure(go.Indicator(
         mode="gauge+number",
         value=p_vol * 100,
@@ -549,7 +528,6 @@ def mostrar_prediccion(modelo, preprocessor, empleado):
     fig.update_layout(height=300)
     st.plotly_chart(fig, use_container_width=True)
 
-    # Factores SHAP
     st.markdown("### Explicacion SHAP")
 
     col1, col2 = st.columns(2)
@@ -632,6 +610,7 @@ def main():
     st.markdown('<div class="main-header">Dashboard de Rotacion de Personal</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Modelo predictivo para firmas auditoras - KPMG, PwC, Deloitte</div>', unsafe_allow_html=True)
 
+    # Cargar recursos
     try:
         modelo, preprocessor = cargar_modelo_y_preprocessor()
         df_original = cargar_datos_cache()
@@ -641,10 +620,13 @@ def main():
         st.info("Asegurate de haber ejecutado `python main.py` al menos una vez.")
         st.stop()
 
+    # Sidebar
     firma, area, nivel, riesgo = render_sidebar(df)
 
+    # Aplicar filtros
     df_filtrado = aplicar_filtros(df, firma, area, nivel, riesgo)
 
+    # Tabs principales
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "Resumen",
         "Distribucion",
