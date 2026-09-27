@@ -1,7 +1,11 @@
-from pydantic import BaseModel, Field
 
+from pydantic import BaseModel, Field
+from typing import List, Optional, Dict
 
 class EmpleadoInput(BaseModel):
+
+    ID_Empleado: Optional[str] = Field(None, description="ID del empleado")
+
     Firma_Auditora: str = Field(..., description="Deloitte, KPMG o PwC")
     Genero: str = Field(..., description="Masculino o Femenino")
     Estado_Civil: str = Field(..., description="Soltero/a, Casado/a, Union libre, Divorciado/a")
@@ -13,6 +17,7 @@ class EmpleadoInput(BaseModel):
     Programa_Desarrollo: str = Field(..., description="Si o No")
     Historial_Disciplinario: str = Field("Ninguno", description="Ninguno, Llamado de atencion, Amonestacion escrita")
 
+    
     Edad: int = Field(..., ge=18, le=70, description="Edad en anios")
     Antiguedad_Meses: float = Field(..., ge=0, description="Antiguedad en meses")
     Salario_Mensual_HNL: float = Field(..., ge=0, description="Salario mensual en HNL")
@@ -27,61 +32,88 @@ class EmpleadoInput(BaseModel):
     Tiempo_Desplazamiento_Min: float = Field(..., ge=0, description="Tiempo de desplazamiento en minutos")
     Carga_Trabajo_1a5: float = Field(..., ge=1, le=5, description="Carga de trabajo 1-5")
 
+    model_config = {
+        "json_schema_extra": {
+            "example": {
+                "ID_Empleado": "HN-AUD-0001",
+                "Firma_Auditora": "KPMG",
+                "Genero": "Femenino",
+                "Estado_Civil": "Soltero/a",
+                "Nivel_Educativo": "Licenciatura",
+                "Universidad_Procedencia": "UNITEC",
+                "Cargo": "Asistente de Impuestos",
+                "Area_Funcional": "Impuestos",
+                "Nivel_Jerarquico": "Operativo",
+                "Programa_Desarrollo": "Si",
+                "Historial_Disciplinario": "Ninguno",
+                "Edad": 43,
+                "Antiguedad_Meses": 63,
+                "Salario_Mensual_HNL": 27000,
+                "Incremento_Salarial_Porcentaje": 5,
+                "Evaluacion_Desempeno_1a5": 4,
+                "Horas_Extra_Mes": 2.2,
+                "Horas_Capacitacion_Anio": 29,
+                "Promociones": 3,
+                "Ausencias_Anio": 3,
+                "Dias_Vacaciones_Pendientes": 0,
+                "Distancia_Domicilio_Trabajo_km": 4.2,
+                "Tiempo_Desplazamiento_Min": 21,
+                "Carga_Trabajo_1a5": 2,
+            }
+        }
+    }
+
+
+class FactorSHAP(BaseModel):
+    feature: str
+    shap: float
+    valor: float
+
 
 class PrediccionOutput(BaseModel):
-    id_empleado: str | None = None
-    prob_permanencia: float
-    prob_renuncia_voluntaria: float
-    prob_renuncia_involuntaria: float
+    ID_Empleado: Optional[str] = None
+    probabilidad_permanencia: float
+    probabilidad_renuncia_voluntaria: float
+    probabilidad_renuncia_involuntaria: float
     nivel_riesgo: str
-    factores_riesgo: list[dict]
-    factores_proteccion: list[dict]
-    recomendaciones: list[str]
+    prediccion: str
+    factores_riesgo: List[FactorSHAP]
+    factores_proteccion: List[FactorSHAP]
+    recomendaciones: List[str]
 
 
 class BatchInput(BaseModel):
-    empleados: list[EmpleadoInput]
+    empleados: List[EmpleadoInput]
 
 
 class BatchOutput(BaseModel):
     total: int
-    predicciones: list[PrediccionOutput]
+    predicciones: List[PrediccionOutput]
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 55c495b (Cleaning stage)
 class ModelInfo(BaseModel):
     nombre: str
     version: str
     tipo: str
-    metricas: dict
+    metricas: Dict[str, float]
     features: int
-<<<<<<< HEAD
-    clases: list[str]
-    fecha_entrenamiento: str | None = None
-=======
     clases: List[str]
     fecha_entrenamiento: Optional[str] = None
 
 
+
 class FeatureImportance(BaseModel):
-    """Importancia de una feature segun SHAP."""
     rank: int
     feature: str
     importancia: float
->>>>>>> 55c495b (Cleaning stage)
 
 
 class FeatureImportanceOutput(BaseModel):
     clase: str
-    top_features: list[dict]
+    top_features: List[FeatureImportance]
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 55c495b (Cleaning stage)
 class HealthCheck(BaseModel):
     status: str
     modelo_cargado: bool

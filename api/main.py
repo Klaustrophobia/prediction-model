@@ -1,9 +1,11 @@
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 import sys
 from pathlib import Path
 
+# Asegurar imports desde raiz
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
@@ -15,11 +17,7 @@ from api.schemas import (
 from api.service import get_service
 from config import TARGET_INV_MAP, ALERT_THRESHOLD, MEDIUM_THRESHOLD
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 55c495b (Cleaning stage)
 app = FastAPI(
     title="API de Prediccion de Rotacion - Firmas Auditoras",
     description=(
@@ -35,17 +33,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55c495b (Cleaning stage)
 @app.get("/", tags=["Root"])
 def root():
     return {
@@ -93,13 +87,9 @@ def model_info():
 
 @app.get("/features/importance", response_model=FeatureImportanceOutput, tags=["Modelo"])
 def features_importance(clase: str = "Renuncia voluntaria", top_n: int = 15):
-<<<<<<< HEAD
-=======
 
->>>>>>> 55c495b (Cleaning stage)
     try:
         service = get_service()
-
         clase_a_idx = {v: k for k, v in TARGET_INV_MAP.items()}
         if clase not in clase_a_idx:
             raise HTTPException(
@@ -118,6 +108,7 @@ def features_importance(clase: str = "Renuncia voluntaria", top_n: int = 15):
 
 @app.post("/predict", response_model=PrediccionOutput, tags=["Prediccion"])
 def predict(empleado: EmpleadoInput):
+
     try:
         service = get_service()
         resultado = service.predecir_empleado(empleado.model_dump(), top_n=5)
@@ -128,10 +119,7 @@ def predict(empleado: EmpleadoInput):
 
 @app.post("/predict/batch", response_model=BatchOutput, tags=["Prediccion"])
 def predict_batch(batch: BatchInput):
-<<<<<<< HEAD
-=======
-   
->>>>>>> 55c495b (Cleaning stage)
+
     try:
         service = get_service()
         empleados_dict = [e.model_dump() for e in batch.empleados]
@@ -141,10 +129,6 @@ def predict_batch(batch: BatchInput):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55c495b (Cleaning stage)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=True)
