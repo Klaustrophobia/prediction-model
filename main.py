@@ -20,7 +20,6 @@ def main():
     print("MODELO PREDICTIVO DE ROTACION - FIRMAS AUDITORAS")
     print("=" * 65)
 
-    # PASO 1
     print("\n" + "-" * 65)
     print("PASO 1: CARGA Y VALIDACION DE DATOS")
     print("-" * 65)
@@ -29,14 +28,12 @@ def main():
     imprimir_resumen(resumen)
     print("\n[OK] PASO 1 completado\n")
 
-    # PASO 2
     print("\n" + "-" * 65)
     print("PASO 2: ANALISIS EXPLORATORIO DE DATOS (EDA)")
     print("-" * 65)
     ejecutar_eda(df)
     print("\n[OK] PASO 2 completado\n")
 
-    # PASO 3
     print("\n" + "-" * 65)
     print("PASO 3: PREPROCESAMIENTO Y FEATURE ENGINEERING")
     print("-" * 65)
@@ -45,7 +42,6 @@ def main():
     preprocessor.save()
     print("\n[OK] PASO 3 completado\n")
 
-    # PASO 4
     print("\n" + "-" * 65)
     print("PASO 4: ENTRENAMIENTO DE MODELOS BASELINE")
     print("-" * 65)
@@ -61,7 +57,6 @@ def main():
     print(f"\n  Mejor modelo baseline: {mejor_nombre}")
     print("\n[OK] PASO 4 completado\n")
 
-    # PASO 5
     print("\n" + "-" * 65)
     print("PASO 5: OPTIMIZACION DE HIPERPARAMETROS")
     print("-" * 65)
@@ -70,7 +65,7 @@ def main():
         nombre_optimizar = mejor_nombre
     else:
         nombre_optimizar = "XGBoost"
-        print(f"\n  Se optimizara XGBoost como modelo principal.\n")
+        print("\n  Se optimizara XGBoost como modelo principal.\n")
 
     trainer = ModelTrainer(nombre_modelo=nombre_optimizar, n_trials=30)
     trainer.entrenar(X_train, y_train, verbose=True)
@@ -78,7 +73,6 @@ def main():
     trainer.guardar()
     print("\n[OK] PASO 5 completado\n")
 
-    # PASO 6
     print("\n" + "-" * 65)
     print("PASO 6: EXPLICABILIDAD CON SHAP")
     print("-" * 65)
@@ -92,7 +86,6 @@ def main():
           f"prob = {proba[idx_max]:.4f}")
     print("\n[OK] PASO 6 completado\n")
 
-    # PASO 7
     print("\n" + "-" * 65)
     print("PASO 7: SISTEMA DE ALERTAS")
     print("-" * 65)
@@ -111,7 +104,6 @@ def main():
 
     print("\n[OK] PASO 7 completado\n")
 
-    # PASO 8
     print("\n" + "-" * 65)
     print("PASO 8: ETICA Y ANALISIS DE SESGOS")
     print("-" * 65)

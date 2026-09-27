@@ -1,25 +1,10 @@
-"""
-Carga y validación inicial de la base de datos.
-Ubicación: data_pipeline/data_loader.py
-
-"""
 import pandas as pd
 from pathlib import Path
 from config import DATA_FILE, SHEET_NAME, TARGET
 
+
 def cargar_datos(ruta: Path = DATA_FILE, hoja: str = SHEET_NAME,
                  verbose: bool = True) -> pd.DataFrame:
-    """
-    Carga la base de datos desde Excel.
-
-    Args:
-        ruta: Ruta al archivo Excel (pathlib.Path)
-        hoja: Nombre de la hoja a leer
-        verbose: Si es True, imprime mensajes de progreso
-
-    Returns:
-        DataFrame con los datos
-    """
     if not ruta.exists():
         raise FileNotFoundError(
             f"\nNo se encontro el archivo: {ruta}\n"
@@ -38,8 +23,8 @@ def cargar_datos(ruta: Path = DATA_FILE, hoja: str = SHEET_NAME,
 
     return df
 
+
 def validar_datos(df: pd.DataFrame) -> dict:
-    """Validaciones básicas sobre los datos."""
     resumen = {
         "n_registros": len(df),
         "n_columnas": df.shape[1],
@@ -52,7 +37,6 @@ def validar_datos(df: pd.DataFrame) -> dict:
 
 
 def imprimir_resumen(resumen: dict) -> None:
-    """Imprime el resumen de validación de forma amigable."""
     print("\n" + "=" * 65)
     print(" RESUMEN DE VALIDACIÓN DE DATOS")
     print("=" * 65)
@@ -60,12 +44,12 @@ def imprimir_resumen(resumen: dict) -> None:
     print(f"  Columnas:                 {resumen['n_columnas']}")
     print(f"  IDs únicos:               {resumen['ids_unicos']}")
     print(f"  Valores nulos totales:    {resumen['valores_nulos_total']}")
-    
+
     if resumen['columnas_con_nulos']:
         print(f"  Columnas con nulos:       {resumen['columnas_con_nulos']}")
     else:
-        print(f"  Columnas con nulos:       Ninguna ✓")
-    
+        print("  Columnas con nulos:       Ninguna ✓")
+
     print(f"\n  Distribución de '{TARGET}':")
     for k, v in resumen["distribucion_target"].items():
         pct = v / resumen["n_registros"] * 100
@@ -74,8 +58,6 @@ def imprimir_resumen(resumen: dict) -> None:
 
 
 if __name__ == "__main__":
-    # Este bloque permite ejecutar el archivo directamente:
-    #   python -m data_pipeline.data_loader
     df = cargar_datos()
     resumen = validar_datos(df)
     imprimir_resumen(resumen)
